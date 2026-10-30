@@ -1,0 +1,14 @@
+{
+  "name": "chemistry-grade10-khmer",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Phealy Thourk",
+  "license": "UNLICENSED",
+  "description": "Khmer-language lecture website for Cambodian Grade 10 Chemistry: atoms, the periodic table, chemical bonding, organic chemistry and fertilisers.",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "katex": "0.16.47"
+  }
+}

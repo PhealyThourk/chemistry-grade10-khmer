@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Phealy Thourk">
+<meta name="copyright" content="© 2026 Phealy Thourk. All rights reserved.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>មេរៀនគីមីវិទ្យា ថ្នាក់ទី ១០</title>
+<script>
+/* apply saved light/dark choice before the page paints */
+try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Moul&display=swap" rel="stylesheet">
+<style>
+/*KATEXCSS*/
+</style>
+<style>
+/*STYLES*/
+</style>
+</head>
+<body>
+<div class="topbar">
+<a id="langToggle" class="lang-toggle" href="index-en.html" hreflang="en" lang="en" title="Read this page in English"><span aria-hidden="true">🌐</span> English</a>
+<button type="button" id="themeToggle" class="theme-toggle" aria-label="ប្តូររបៀបពន្លឺ">
+  <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+  <span class="t-label">ងងឹត</span>
+</button>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink)"/></marker>
+  <marker id="arE" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ele)"/></marker>
+  <radialGradient id="gC" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#8a8f94"/><stop offset="1" stop-color="#212529"/></radialGradient>
+  <radialGradient id="gH" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9cfd4"/></radialGradient>
+  <radialGradient id="gO" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#ff8787"/><stop offset="1" stop-color="#c92a2a"/></radialGradient>
+  <radialGradient id="gN" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#91a7ff"/><stop offset="1" stop-color="#364fc7"/></radialGradient>
+  <radialGradient id="gCl" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#b2f2bb"/><stop offset="1" stop-color="#2b8a3e"/></radialGradient>
+  <radialGradient id="gNa" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#d0bfff"/><stop offset="1" stop-color="#6741d9"/></radialGradient>
+</defs></svg>
+
+<header class="hero">
+  <div class="kicker">គីមីវិទ្យា · ថ្នាក់ទី ១០ · សេចក្តីសង្ខេបមេរៀនសំខាន់ៗ</div>
+  <h1>គីមីវិទ្យា ថ្នាក់ទី ១០</h1>
+  <p class="lead"><b>គីមី</b> គឺជាវិទ្យាសាស្ត្រសិក្សាពីរូបធាតុ និងបម្លែងរបស់វា។ ទំព័រនេះប្រមូលចំណុចសំខាន់ៗដែលសិស្សត្រូវចេះ ពីជំពូកទាំង ៤ នៃសៀវភៅ។</p>
+  <nav class="chapters" aria-label="ជំពូក">
+    <a href="#ch1"><small>ជំពូកទី ១</small><b>អាតូម</b></a>
+    <a href="#ch2"><small>ជំពូកទី ២</small><b>តារាងខួបនៃធាតុគីមី</b></a>
+    <a href="#ch3"><small>ជំពូកទី ៣</small><b>សម្ព័ន្ធគីមី និងទម្រង់អង្គធាតុរឹង</b></a>
+    <a href="#ch4"><small>ជំពូកទី ៤</small><b>គីមីសរីរាង្គ</b></a>
+  </nav>
+</header>
+
+<div class="wrap">
+<nav class="toc" aria-label="មាតិកា">
+  <div class="t">មាតិកា</div>
+  <a class="ch" href="#ch1">១. អាតូម</a>
+  <a href="#c1-laws">ច្បាប់គ្រឹះ និងដាល់តុន</a>
+  <a href="#c1-struct">ភាគល្អិតក្នុងអាតូម</a>
+  <a href="#c1-iso">អ៊ីសូតូប</a>
+  <a href="#c1-shell">ស្រទាប់អេឡិចត្រុង</a>
+  <a href="#c1-mole">ម៉ូល</a>
+  <a href="#practice-ch1">↳ សំណួរ និងដំណោះស្រាយ</a>
+  <a class="ch" href="#ch2">២. តារាងខួប</a>
+  <a href="#c2-table">ក្រុម និងខួប</a>
+  <a href="#c2-alk">លោហៈអាល់កាឡាំង</a>
+  <a href="#c2-hal">អាឡូសែន</a>
+  <a href="#c2-nob">ឧស្ម័នកម្រ</a>
+  <a href="#c2-tr">លោហៈឆ្លង</a>
+  <a href="#practice-ch2">↳ សំណួរ និងដំណោះស្រាយ</a>
+  <a href="#practice-ch2-transition">↳ សំណួរលោហៈឆ្លង</a>
+  <a class="ch" href="#ch3">៣. សម្ព័ន្ធគីមី</a>
+  <a href="#c3-cov">សម្ព័ន្ធកូវ៉ាឡង់</a>
+  <a href="#c3-ion">សម្ព័ន្ធអ៊ីយ៉ុង</a>
+  <a href="#c3-solid">ទម្រង់អង្គធាតុរឹង</a>
+  <a href="#practice-ch3">↳ សំណួរ និងដំណោះស្រាយ</a>
+  <a class="ch" href="#ch4">៤. គីមីសរីរាង្គ</a>
+  <a href="#c4-oil">ប្រេងកាត</a>
+  <a href="#c4-alkane">អាល់កាន</a>
+  <a href="#c4-alkene">អាល់សែន និងអាល់ស៊ីន</a>
+  <a href="#c4-benz">បង់សែន</a>
+  <a href="#c4-fert">ជីគីមី</a>
+  <a href="#practice-ch4">↳ សំណួរ និងដំណោះស្រាយ</a>
+  <a href="#practice-ch4-fertiliser">↳ សំណួរអំពីជី</a>
+  <a class="ch" href="#exercises">សំណួរ និងលំហាត់</a>
+</nav>
+
+<main>
+<!-- ================= CHAPTER 1 ================= -->
+<section class="chapter" id="ch1">
+  <div class="chead"><span class="num">ជំពូកទី ១</span><h2>អាតូម</h2></div>
+  <p>រូបធាតុទាំងអស់ផ្សំឡើងដោយភាគល្អិតតូចបំផុតដែលមើលមិនឃើញដោយភ្នែកទទេ ហៅថា <b>អាតូម</b>។</p>
+
+  <h3 id="c1-laws"><span class="n">១.១</span>ច្បាប់គ្រឹះ និងទ្រឹស្តីអាតូមរបស់ដាល់តុន</h3>
+  <div class="three">
+    <div class="cmp"><h4>ច្បាប់រក្សាម៉ាស</h4>ក្នុងប្រតិកម្មគីមី ម៉ាសសរុបនៃអង្គធាតុប្រតិករ ស្មើនឹងម៉ាសសរុបនៃអង្គធាតុកកើត។</div>
+    <div class="cmp"><h4>ច្បាប់សមាមាត្រកំណត់</h4>អង្គធាតុសុទ្ធមួយ មានធាតុផ្សំក្នុងសមាមាត្រម៉ាសថេរជានិច្ច។ ឧ. ទឹក៖ H 11.11% និង O 88.89%។</div>
+    <div class="cmp"><h4>ច្បាប់ពហុសមាមាត្រ</h4>ពេលធាតុពីរបង្កើតសមាសធាតុច្រើន ផលធៀបម៉ាសជាចំនួនគត់តូចៗ។ ឧ. CO និង CO₂ → 1 : 2។</div>
+  </div>
+  
+<aside class="learn-connection" id="connect-mass-reactions"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> នៅពេលរៀន <a href="#c4-combustion">សមីការចំហេះ (§៤.២)</a> ត្រូវធ្វើឱ្យចំនួនអាតូមនៃធាតុនីមួយៗស្មើគ្នាសងខាង។ នេះអនុវត្តច្បាប់រក្សាម៉ាស៖ ប្ដូរតែមេគុណ មិនប្ដូរលេខតូចក្នុងរូបមន្តសមាសធាតុទេ។</aside>
+<div class="two" style="align-items:center">
+    <div class="key"><span class="lab">ទ្រឹស្តីអាតូមរបស់ដាល់តុន (១៨០៣)</span>
+      <ul>
+        <li>រូបធាតុផ្សំឡើងពីភាគល្អិតតូចៗ ហៅថា អាតូម។</li>
+        <li>អាតូមនៃធាតុតែមួយ មានម៉ាស ទំហំ និងលក្ខណៈដូចគ្នា។</li>
+        <li>គេមិនអាចបំបែក បង្កើតថ្មី ឬបំផ្លាញអាតូមបានទេ។</li>
+        <li>អាតូមនៃធាតុផ្សេងគ្នា ផ្សំគ្នាតាមផលធៀបជាចំនួនគត់តូចៗ។</li>
+        <li>ក្នុងប្រតិកម្មគីមី អាតូមគ្រាន់តែរៀបចំសាឡើងវិញ។</li>
+      </ul></div>
+    <figure class="card-fig">
+      <svg viewBox="0 0 360 170" role="img" aria-label="C ផ្សំនឹង O បង្កើត CO និង CO2">
+        <circle cx="40" cy="45" r="18" fill="url(#gC)"/><text x="66" y="51">+</text>
+        <circle cx="96" cy="45" r="18" fill="url(#gO)"/><text x="126" y="51">→</text>
+        <circle cx="168" cy="45" r="18" fill="url(#gC)"/><circle cx="198" cy="45" r="18" fill="url(#gO)"/>
+        <text x="40" y="84" text-anchor="middle" class="sm">C</text><text x="96" y="84" text-anchor="middle" class="sm">O</text><text x="183" y="84" text-anchor="middle" class="sm">CO</text>
+        <circle cx="40" cy="125" r="18" fill="url(#gC)"/><text x="66" y="131">+</text>
+        <circle cx="96" cy="125" r="18" fill="url(#gO)"/><text x="122" y="131">+</text>
+        <circle cx="152" cy="125" r="18" fill="url(#gO)"/><text x="180" y="131">→</text>
+        <circle cx="222" cy="125" r="18" fill="url(#gO)"/><circle cx="252" cy="125" r="18" fill="url(#gC)"/><circle cx="282" cy="125" r="18" fill="url(#gO)"/>
+        <text x="252" y="164" text-anchor="middle" class="sm">CO₂</text>
+        <text x="320" y="50" class="sm">O : C = 1</text><text x="310" y="104" class="sm">O : C = 2</text>
+      </svg>
+      <figcaption><b>រូបទី ១</b> ការពន្យល់ច្បាប់ពហុសមាមាត្រដោយអាតូម</figcaption>
+    </figure>
+  </div>
+  <p class="muted">ទ្រឹស្តីទំនើប៖ ការរកឃើញអេឡិចត្រុង កាំរស្មី X និងវិទ្យុសកម្ម បង្ហាញថា អាតូមអាចបំបែកជាភាគល្អិតតូចជាងនេះបាន។</p>
+
+  <h3 id="c1-struct"><span class="n">១.២</span>ភាគល្អិតបង្កអាតូម</h3>
+  <div class="two" style="align-items:center">
+    <figure class="card-fig">
+      <svg id="atomSvg" viewBox="0 0 320 250" role="img" aria-label="រចនាសម្ព័ន្ធអាតូម" style="touch-action:none">
+        <circle cx="140" cy="125" r="112" style="fill:var(--ele);opacity:.06"/>
+        <g id="atShells"></g><g id="atDots"></g><g id="atPhot"></g>
+        <g id="nuc"></g><g id="atE"></g>
+        <line x1="156" y1="118" x2="262" y2="58" class="dsh"/><text x="266" y="56" class="sm">ណ្វៃយ៉ូ</text>
+        <text x="266" y="72" class="sm">~10⁻¹⁵ m</text>
+        <text id="atIon" x="300" y="122" text-anchor="end" style="font-weight:700;font-size:18px"></text>
+        <line x1="40" y1="242" x2="240" y2="242" class="ln" style="stroke-width:1.2" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        <rect x="104" y="233" width="72" height="17" style="fill:var(--card)"/><text x="140" y="246" text-anchor="middle" class="sm">~10⁻¹⁰ m</text>
+      </svg>
+      <div class="atctl">
+        <label for="atEl">ធាតុ <select id="atEl"></select></label>
+        <div class="seg" role="group"><button type="button" id="atBohr" class="on" aria-pressed="true">គំរូស្រទាប់ (Bohr)</button><button type="button" id="atCloud" aria-pressed="false">គំរូពពក (កង់ទិច)</button></div>
+        <div class="seg"><button type="button" id="atPlay">⏸ ផ្អាក</button><button type="button" id="atAdd" aria-label="+ e⁻">+ e⁻</button><button type="button" id="atRem" aria-label="− e⁻">− e⁻</button><button type="button" id="atReset">↺ ដើមវិញ</button></div>
+        <div class="readout atread"><div><small class="c-pro">ប្រូតុង</small><b id="atP">11</b></div><div><small class="c-ele">អេឡិចត្រុង</small><b id="atNe">11</b></div><div><small>បន្ទុក</small><b id="atQ">0</b></div><div><small>ស្ថានភាព</small><b id="atSt" style="font-size:14px">—</b></div><div class="atcfg"><small>របាយអេឡិចត្រុង</small><b id="atCfg">—</b></div></div>
+        <p class="athint"><b>អូស</b>អេឡិចត្រុង៖ វាត្រូវទាញត្រឡប់មកវិញ · អូសចេញក្រៅពពក → អ៊ីយ៉ុង · <b>ចុច</b>អេឡិចត្រុង៖ វាស្រូបថាមពល លោតឡើង រួចធ្លាក់ចុះបញ្ចេញពន្លឺ</p>
+      </div>
+      <div class="electron-cloud-note" id="c1-electron-cloud" style="scroll-margin-top:80px">
+<h4>តើពពកអេឡិចត្រុងបង្ហាញអ្វី?</h4>
+<p><b>ពពកអេឡិចត្រុង</b>ពិពណ៌នាអំពីប្រូបាប៊ីលីតេនៃការរកឃើញអេឡិចត្រុងនៅតំបន់ផ្សេងៗជុំវិញណ្វៃយ៉ូ។ តំបន់ដែលចំណុចកាន់តែក្រាស់ តំណាងឱ្យឱកាសរកឃើញកាន់តែខ្ពស់ក្នុងមួយឯកតាមាឌ មិនមែនជាផ្ទៃរឹង ឬគន្លងរង្វង់ថេរទេ។</p>
+<p><b>អាតូមអ៊ីដ្រូសែនមានអេឡិចត្រុងតែមួយ។</b> ចំណុចជាច្រើនតំណាងឱ្យទីតាំងដែលអាចវាស់ឃើញបានជាច្រើនដង លើអាតូមដែលរៀបចំក្នុងស្ថានភាពដូចគ្នា មិនមែនអេឡិចត្រុងរាប់រយដែលមានក្នុងពេលតែមួយទេ។ ចំណុចទាំងនេះមិនបង្ហាញផ្លូវធ្វើដំណើរដែលដឹងច្បាស់ទេ។ អ័រប៊ីតាល់ជាស្ថានភាពកង់ទិចដែលមានរបាយប្រូបាប៊ីលីតេក្នុងលំហជាក់លាក់ ខុសពីគន្លងដែលជាផ្លូវធ្វើដំណើរ។</p>
+<p><b>ភ្ជាប់ម៉ូដែលទាំងពីរ៖</b> ម៉ូដែល Bohr ជួយរាប់អេឡិចត្រុងតាម <a href="#c1-shell">ស្រទាប់ (§១.៤)</a>; ម៉ូដែលពពកជួយយល់ពីរបាយរបស់វាក្នុងលំហ។ កម្រិតថាមពលដែលអនុញ្ញាតនៅតែមានក្នុងម៉ូដែលពពក៖ <a href="#c1-shell-energy">ការស្រូប ឬបញ្ចេញថាមពល</a>ប្ដូរស្ថានភាពអេឡិចត្រុង។ ការដកអេឡិចត្រុងចេញប្ដូរ <a href="#connect-atomic-identity">បន្ទុកអាតូម</a> មិនប្ដូរចំនួនប្រូតុងទេ។</p>
+<p class="muted">គំនូរនេះជាម៉ូដែលសាមញ្ញសម្រាប់បង្រៀន។ ទីតាំងចំណុចគ្រាន់តែសម្រាប់ពន្យល់ ពពកមិនមានព្រំដែនក្រៅមុតស្រួច ហើយទំហំណ្វៃយ៉ូ និងពពកមិនគូរតាមមាត្រដ្ឋានដូចគ្នាទេ។</p>
+</div>
+      <figcaption><b>រូបទី ២</b> អាតូមអន្តរកម្ម៖ ណ្វៃយ៉ូតូចណាស់នៅកណ្តាល ព័ទ្ធជុំវិញដោយអេឡិចត្រុង</figcaption>
+    </figure>
+    <div>
+      <p>ប្រូតុង និងណឺត្រុងនៅក្នុង<b>ណ្វៃយ៉ូ</b>។ អេឡិចត្រុងស្រាលណាស់ ដូច្នេះម៉ាសអាតូមស្ទើរតែទាំងអស់នៅក្នុងណ្វៃយ៉ូ៖ \(m_{\text{អាតូម}}\approx m_p+m_n\)។</p>
+    </div>
+  </div>
+  <div class="tbl ptab"><table>
+        <caption><b>តារាង ១.១</b> ម៉ាស និងបន្ទុកនៃភាគល្អិតបង្កអាតូម</caption>
+        <thead>
+          <tr><th rowspan="2">ភាគល្អិត</th><th rowspan="2">និមិត្តសញ្ញា</th><th colspan="2">ម៉ាស</th><th colspan="2">បន្ទុក</th></tr>
+          <tr><th>ក្រាម (g)</th><th>ម៉ាសធៀប</th><th>គូឡុំ (C)</th><th>ឯកតាបន្ទុក</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="c-pro"><b>ប្រូតុង</b></td><td>\(p\)</td><td>\(1.67262\times10^{-24}\)</td><td>\(1\,\text{u}\)</td><td>\(+1.6022\times10^{-19}\)</td><td>\(+1\)</td></tr>
+          <tr><td class="c-neu"><b>ណឺត្រុង</b></td><td>\(n\)</td><td>\(1.67493\times10^{-24}\)</td><td>\(1\,\text{u}\)</td><td>\(0\)</td><td>\(0\)</td></tr>
+          <tr><td class="c-ele"><b>អេឡិចត្រុង*</b></td><td>\(e^-\)</td><td>\(9.10938\times10^{-28}\)</td><td>\(\tfrac{1}{1840}\,\text{u}\)</td><td>\(-1.6022\times10^{-19}\)</td><td>\(-1\)</td></tr>
+        </tbody></table>
+        <p class="tnote">* ពិសោធន៍ថ្មីៗដែលច្បាស់លាស់ជាងមុន ផ្តល់តម្លៃម៉ាសអេឡិចត្រុងត្រឹមត្រូវជាងតម្លៃរបស់ Millikan។ បន្ទុក \(1.6022\times10^{-19}\,\text{C}\) ហៅថា <b>បន្ទុកបឋម</b> \(e\) ហើយ \(m_p\approx1836\,m_e\)។</p></div>
+  <div class="formula"><span class="tag">លេខអាតូម និងចំនួនម៉ាស</span>
+    \[{}^{\htmlClass{c-acc}{A}}_{\htmlClass{c-pro}{Z}}\mathrm{X}\qquad
+    \begin{aligned}Z&=\text{ចំនួនប្រូតុង}=\text{ចំនួនអេឡិចត្រុង (អាតូមអព្យាក្រឹត)}\\ A&=\text{ចំនួនប្រូតុង}+\text{ចំនួនណឺត្រុង}\\ N&=A-Z\ \ (\text{ចំនួនណឺត្រុង})\end{aligned}\]
+  </div>
+  <div class="ex"><span class="lab">ឧទាហរណ៍</span> \(\ce{^{23}_{11}Na}\)៖ \(11\,p\), \(11\,e^-\), និង \(23-11=12\,n\)។ ធាតុគីមីមួយត្រូវកំណត់ដោយ<b>លេខអាតូម \(Z\)</b>។</div>
+
+  
+<aside class="learn-connection" id="connect-atomic-identity"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ចំនួនប្រូតុង Z កំណត់អត្តសញ្ញាណធាតុ និងទីតាំងរបស់វាក្នុង <a href="#c2-table">តារាងខួប (§២.១)</a>។ ការបោះបង់ ឬទទួលអេឡិចត្រុងប្ដូរបន្ទុក មិនប្ដូរអត្តសញ្ញាណធាតុទេ ហើយបង្កើតអ៊ីយ៉ុងដែលប្រើក្នុង <a href="#c3-ion">សម្ព័ន្ធអ៊ីយ៉ុង (§៣.២)</a>។</aside>
+<h3 id="c1-iso"><span class="n">១.៣</span>អ៊ីសូតូប</h3>
+  <p><b>អ៊ីសូតូប</b> គឺជាអាតូមនៃធាតុតែមួយ ដែលមាន \(Z\) ដូចគ្នា ប៉ុន្តែចំនួនណឺត្រុង (និង \(A\)) ខុសគ្នា។ ពួកវាមានលក្ខណៈគីមីដូចគ្នា។</p>
+<aside class="learn-connection" id="connect-isotopes-table"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អ៊ីសូតូបស្ថិតនៅទីតាំងតែមួយក្នុង <a href="#c2-table">តារាងខួប (§២.១)</a> ព្រោះ Z មិនប្ដូរ។ អាតូមអព្យាក្រឹតនៃអ៊ីសូតូបមានរបាយអេឡិចត្រុងដូចគ្នា ដូច្នេះលក្ខណៈគីមីធម្មតាស្រដៀងគ្នាខ្លាំង។ ម៉ាសមធ្យមគិតតាមភាគរយពន្យល់លេខទសភាគក្នុងតារាង ហើយប្រើសម្រាប់គណនា <a href="#c1-mole">ម៉ាសម៉ូល (§១.៥)</a>។</aside>
+
+  <div class="two" style="align-items:center">
+    <figure class="card-fig">
+      <svg viewBox="0 0 360 160" role="img" aria-label="អ៊ីសូតូបក្លរ 35 និង 37">
+        <g id="iso35"></g><g id="iso37"></g>
+        <tx x="90" y="146" w="140">{}^{35}_{17}\mathrm{Cl}:\ 17p,\ 18n</tx>
+        <tx x="270" y="146" w="140">{}^{37}_{17}\mathrm{Cl}:\ 17p,\ 20n</tx>
+      </svg>
+      <figcaption><b>រូបទី ៣</b> ណ្វៃយ៉ូនៃអ៊ីសូតូបក្លរ (<span class="c-pro">ប្រូតុង</span> · <span class="c-neu">ណឺត្រុង</span>)</figcaption>
+    </figure>
+    <div class="formula"><span class="tag">ម៉ាសអាតូមមធ្យម</span>
+      \[\bar M(\mathrm{Cl})=35\times\frac{75.76}{100}+37\times\frac{24.24}{100}\approx35.5\,\text{u}\]
+      <div class="muted" style="font-size:15px;padding-bottom:6px">គុណម៉ាសអ៊ីសូតូបនីមួយៗ នឹងភាគរយរបស់វាក្នុងធម្មជាតិ រួចបូកបញ្ចូលគ្នា។</div></div>
+  </div>
+
+  <h3 id="c1-shell"><span class="n">១.៤</span>ស្រទាប់អេឡិចត្រុង</h3>
+  <p>អេឡិចត្រុងរៀបជា<b>ស្រទាប់</b> \(K, L, M, N,\dots\) (\(n=1,2,3,4\)) ពីណ្វៃយ៉ូទៅក្រៅ។ គេបំពេញស្រទាប់ខាងក្នុងមុន។ ស្រទាប់ទី \(n\) ផ្ទុកអេឡិចត្រុងអតិបរមា៖</p>
+  <div class="formula"><span class="tag">ចំនួនអេឡិចត្រុងអតិបរមា</span>
+    \[N_{\max}=2n^2\qquad K\,(n{=}1):2\quad L\,(n{=}2):8\quad M\,(n{=}3):18\]</div>
+  <p>ចំពោះធាតុ ២០ ដំបូង ស្រទាប់ \(M\) ទទួលត្រឹម 8 អេឡិចត្រុង មុនពេលចាប់ផ្តើមស្រទាប់ \(N\)។ អេឡិចត្រុងនៅស្រទាប់ក្រៅបង្អស់ ហៅថា <b>អេឡិចត្រុងវ៉ាឡង់</b> វាសម្រេចលក្ខណៈគីមីនៃធាតុ។</p>
+
+  
+<aside class="learn-connection" id="connect-shells-bonding"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អេឡិចត្រុងស្រទាប់ក្រៅដែលរៀនទីនេះពន្យល់ទាំង <a href="#c2-table">ភាពស្រដៀងគ្នាក្នុងក្រុមសំខាន់ (§២.១)</a> និង <a href="#c3-cov">ការប្រើអេឡិចត្រុងរួម (§៣.១)</a> ឬ <a href="#c3-ion">ការផ្ទេរអេឡិចត្រុង (§៣.២)</a>។ ឧទាហរណ៍ Na មាន 2,8,1 និង Cl មាន 2,8,7; ការផ្ទេរអេឡិចត្រុងមួយបង្កើត Na⁺ និង Cl⁻។</aside>
+<div class="key" id="c1-shell-energy" style="scroll-margin-top:80px">
+<h4>សង្ខេប៖ អេឡិចត្រុងនៅជុំវិញណ្វៃយ៉ូ</h4>
+<ul>
+<li><b>កម្លាំងទាក់ទាញ៖</b> ណ្វៃយ៉ូវិជ្ជមានទាក់ទាញអេឡិចត្រុងអវិជ្ជមាន។ អាតូមអព្យាក្រឹតមាន Z ប្រូតុង និង Z អេឡិចត្រុង ដូច្នេះបន្ទុកសរុបស្មើសូន្យ។</li>
+<li><b>ស្រទាប់ និងថាមពល៖</b> អេឡិចត្រុងស្ថិតក្នុងស្ថានភាពថាមពលដែលអនុញ្ញាតនៅជុំវិញណ្វៃយ៉ូ។ ក្នុងម៉ូដែលស្រទាប់ K, L, M… តំណាងឱ្យកម្រិតថាមពលសំខាន់ៗបន្តបន្ទាប់។ ជាទូទៅ អេឡិចត្រុងស្រទាប់ក្រៅមានថាមពលខ្ពស់ជាង និងជាប់នឹងណ្វៃយ៉ូខ្សោយជាងអេឡិចត្រុងស្រទាប់ក្នុង។</li>
+<li><b>ការប្រែប្រួលថាមពល៖</b> អេឡិចត្រុងអាចស្រូបថាមពល ហើយផ្លាស់ទៅកម្រិតថាមពលខ្ពស់ជាងដែលអនុញ្ញាត។ ពេលត្រឡប់ទៅកម្រិតទាប វាបញ្ចេញថាមពលស្មើនឹងផលដកថាមពលរវាងកម្រិតទាំងពីរ ជាពន្លឺ។ ដើម្បីដកវាចេញពីអាតូមទាំងស្រុង ត្រូវផ្ដល់ថាមពលគ្រប់គ្រាន់ឱ្យឈ្នះកម្លាំងទាក់ទាញពីណ្វៃយ៉ូ។</li>
+<li><b>ឧទាហរណ៍សូដ្យូម៖</b> អាតូមសូដ្យូម-23 អព្យាក្រឹតមាន 11 ប្រូតុង 12 ណឺត្រុង និង 11 អេឡិចត្រុង រៀបជា <b>2,8,1</b>។ អេឡិចត្រុងតែមួយនៅស្រទាប់ទីបី គឺអេឡិចត្រុងវ៉ាឡង់។ ពេលបោះបង់វា អាតូមក្លាយជា Na⁺ ដែលមានរបាយ 2,8។</li>
+</ul>
+<p>ប្រើ <a href="#ptw">ឧបករណ៍គំនូរស្រទាប់ខាងក្រោម</a> ហើយជ្រើស Na ដើម្បីមើលរបាយនេះ។ វាក៏ជួយពន្យល់ <a href="#c2-alk-why">មូលហេតុដែលលោហៈអាល់កាឡាំងងាយបោះបង់អេឡិចត្រុងស្រទាប់ក្រៅ</a>។</p>
+<p class="muted">គំនូរស្រទាប់ជាម៉ូដែលសាមញ្ញ មិនមែនជាគន្លងរង្វង់ថេរដែលអេឡិចត្រុងធ្វើដំណើរតាមទេ។</p>
+</div>
+
+  <div class="widget" id="ptw">
+    <div class="wt"><span>សាកល្បង</span>ចុចលើធាតុណាមួយ ក្នុងចំណោមធាតុ ២០ ដំបូង</div>
+    <div class="ptwrap">
+      <div>
+        <div class="pt" id="pt"></div>
+        <div class="legend">
+          <span><i style="background:var(--alk)"></i>លោហៈអាល់កាឡាំង</span><span><i style="background:var(--metal)"></i>លោហៈផ្សេងទៀត</span>
+          <span><i style="background:var(--metalloid)"></i>ធាតុអំផូទែ</span><span><i style="background:var(--nonmetal)"></i>អលោហៈ</span>
+          <span><i style="background:var(--halo)"></i>អាឡូសែន</span><span><i style="background:var(--noble)"></i>ឧស្ម័នកម្រ</span>
+        </div>
+      </div>
+      <div>
+        <svg id="bohr" viewBox="0 0 240 240" role="img" aria-label="ម៉ូដែលអាតូម" style="max-width:300px;margin:0 auto;display:block"></svg>
+        <div style="text-align:center;font-size:20px;font-weight:700" id="eName">—</div>
+        <div class="readout">
+          <div><small class="c-pro">ប្រូតុង p</small><b id="eP">—</b></div>
+          <div><small class="c-neu">ណឺត្រុង n</small><b id="eN">—</b></div>
+          <div><small class="c-ele">អេឡិចត្រុង e⁻</small><b id="eE">—</b></div>
+        </div>
+        <div class="readout">
+          <div><small>របាយអេឡិចត្រុង</small><b id="eCfg" style="font-size:16px">—</b></div>
+          <div><small>ក្រុម / ខួប</small><b id="eGP" style="font-size:16px">—</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="c1-mole"><span class="n">១.៥</span>ម៉ូល</h3>
+  <p>អាតូមតូចពេក មិនអាចរាប់ម្តងមួយៗបាន។ គីមីវិទូរាប់ជាកញ្ចប់ ហៅថា <b>ម៉ូល</b> (mol) ដូចយើងរាប់ស៊ុតជាដប់។</p>
+  <div class="two">
+    <div class="formula"><span class="tag">ចំនួនអាវ៉ូកាដ្រូ</span>
+      \[\mathcal N=6.02\times10^{23}\]
+      <div class="muted" style="font-size:15px;padding-bottom:6px">1 mol អាតូម មាន \(6.02\times10^{23}\) អាតូម · 1 mol ម៉ូលេគុល មាន \(6.02\times10^{23}\) ម៉ូលេគុល។</div></div>
+    <div class="formula"><span class="tag">ម៉ាសម៉ូល \(M\) (g·mol⁻¹)</span>
+      \[m=n\cdot M\quad\Longrightarrow\quad n=\frac{m}{M}\]
+      \[M(\mathrm{A}_x\mathrm{B}_y)=x\,M(\mathrm A)+y\,M(\mathrm B)\]</div>
+  </div>
+  
+<aside class="learn-connection" id="connect-mole-reaction"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ប្រើម៉ូលដើម្បីបម្លែង <a href="#c4-combustion">សមីការដែលបានផ្ទឹម (§៤.២)</a> ទៅជាបរិមាណ៖ CH₄ + 2O₂ → CO₂ + 2H₂O មានន័យថាមេតាន 1 mol ប្រតិកម្មជាមួយអុកស៊ីសែន 2 mol មិនមែន 1 g ជាមួយ 2 g ទេ។ វិធីដូចគ្នាអាចរក <a href="#connect-fertiliser-mass">ភាគរយម៉ាសសារធាតុចិញ្ចឹមក្នុងជី (§៤.៥)</a>។</aside>
+<div class="ex"><span class="lab">ឧទាហរណ៍</span> \(M(\ce{CO2})=12+2\times16=44\,\text{g·mol}^{-1}\) · កាល់ស្យូម \(0.2\,\text{g}\)៖ \(n=\dfrac{0.2}{40}=5\times10^{-3}\,\text{mol}\)</div>
+  <div class="widget">
+    <div class="wt"><span>គណនា</span>ពីម៉ាស ទៅចំនួនម៉ូល និងចំនួនភាគល្អិត</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:6px 0">
+      <label for="msub">សារធាតុ</label>
+      <select id="msub">
+        <option value="18|H₂O|ម៉ូលេគុល">ទឹក H₂O (M = 18)</option>
+        <option value="44|CO₂|ម៉ូលេគុល">កាបូនឌីអុកស៊ីត CO₂ (M = 44)</option>
+        <option value="16|CH₄|ម៉ូលេគុល">មេតាន CH₄ (M = 16)</option>
+        <option value="58.5|NaCl|ឯកតា">អំបិល NaCl (M = 58.5)</option>
+        <option value="40|Ca|អាតូម">កាល់ស្យូម Ca (M = 40)</option>
+        <option value="56|Fe|អាតូម">ដែក Fe (M = 56)</option>
+      </select>
+      <label for="mmass">ម៉ាស m (g)</label>
+      <input type="number" id="mmass" value="36" min="0" step="any" style="width:110px">
+    </div>
+    <div class="readout">
+      <div><small>ចំនួនម៉ូល n = m / M</small><b id="mn">2.00 mol</b></div>
+      <div><small>ចំនួនភាគល្អិត n × 6.02×10²³</small><b id="mN">1.20×10²⁴</b></div>
+    </div>
+  </div>
+
+<div class="chapter-practice" id="practice-ch1">
+<h3>អាតូម៖ លំហាត់ពីសៀវភៅសិក្សា</h3>
+<p class="muted">សម្រួលពីលំហាត់ក្នុងសៀវភៅសិក្សា ទំព័រ 23–24 (លេខទំព័របោះពុម្ព)។ ដំណោះស្រាយបន្ថែមសម្រាប់គេហទំព័រនេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch1-1"><summary><span class="q">១.</span><span>តើផ្នែកណានៃអាតូមផ្ទុកបន្ទុកវិជ្ជមាន? តើវាមានភាគល្អិតអ្វីខ្លះ? ចូរប្រៀបធៀបបន្ទុកនៃភាគល្អិតទាំងបី។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>ណ្វៃយ៉ូ</b>មានប្រូតុង និងណឺត្រុង។ ប្រូតុងមានបន្ទុក +1 ណឺត្រុងមានបន្ទុក 0 និងអេឡិចត្រុងមានបន្ទុក −1 (គិតតាមឯកតាបន្ទុកអគ្គិសនីមូលដ្ឋាន)។ អេឡិចត្រុងស្ថិតនៅជុំវិញណ្វៃយ៉ូ។ ណ្វៃយ៉ូមានបន្ទុកវិជ្ជមាន ព្រោះណឺត្រុងមិនមានបន្ទុកទេ។</p></div></details>
+<details id="practice-ch1-2"><summary><span class="q">២.</span><span>អាតូមអព្យាក្រឹតមួយមាន 3 ប្រូតុង និងចំនួនម៉ាស 7។ រក Z, A ចំនួនអេឡិចត្រុង ចំនួនណឺត្រុង និងឈ្មោះធាតុ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>\(Z=3\), \(A=7\)។ អាតូមអព្យាក្រឹត ដូច្នេះ \(e^-=3\)។ ចំនួនណឺត្រុង \(N=A-Z=7-3=4\)។ ធាតុនេះគឺលីចូម៖ \(\ce{^{7}_{3}Li}\)។</p></div></details>
+<details id="practice-ch1-3"><summary><span class="q">៣.</span><span>ចូរឱ្យនិយមន័យអ៊ីសូតូប។ តើ «អ៊ីសូតូបនៃធាតុតែមួយមានចំនួនប្រូតុងខុសគ្នា» ត្រូវឬខុស? ពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>ខុស។</b> អ៊ីសូតូបមានចំនួនប្រូតុង Z ដូចគ្នា ប៉ុន្តែមានចំនួនណឺត្រុងខុសគ្នា ដូច្នេះចំនួនម៉ាសខុសគ្នា។ កាបូន-12 និងកាបូន-14 មាន 6 ប្រូតុងដូចគ្នា ប៉ុន្តែមាន 6 និង 8 ណឺត្រុងរៀងគ្នា។</p></div></details>
+<details id="practice-ch1-4"><summary><span class="q">៤.</span><span>តើស្រទាប់ M អាចផ្ទុកអេឡិចត្រុងជាអតិបរមាប៉ុន្មាន? បង្ហាញរូបមន្ត។ តើអាតូមដែលមានបីស្រទាប់ សុទ្ធតែមានស្រទាប់ M ពេញឬទេ?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>ស្រទាប់ M មាន \(n=3\)។ ចំណុះអតិបរមាគឺ \(2n^2=2(3)^2=18\) អេឡិចត្រុង។ <b>ទេ៖</b> នេះជាចំណុះអតិបរមា មិនមែនចំនួនអេឡិចត្រុងដែលមានជាក់ស្តែងទេ។ ឧទាហរណ៍ សូដ្យូមមានរបាយ 2,8,1។</p></div></details>
+<details id="practice-ch1-5"><summary><span class="q">៥.</span><span>អាតូមអព្យាក្រឹតមួយមានរបាយអេឡិចត្រុង 2,8។ សិស្សម្នាក់ថា លេខអាតូមរបស់វាស្មើ 8។ ចូរកែតម្រូវ និងពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>អេឡិចត្រុងសរុប \(=2+8=10\)។ អាតូមអព្យាក្រឹតមានចំនួនប្រូតុងស្មើចំនួនអេឡិចត្រុង ដូច្នេះ \(Z=10\) មិនមែន 8 ទេ។ វាជាណេអុង។ លេខ 8 គ្រាន់តែជាចំនួនអេឡិចត្រុងស្រទាប់ក្រៅ។</p></div></details>
+<details id="practice-ch1-6"><summary><span class="q">៦.</span><span>តើដែក 1 mol មានប៉ុន្មានអាតូម? រកម៉ាសដែក 0.20 mol។ ឱ្យ M(Fe) = 56 g/mol និងថេរអាវ៉ូកាដ្រូ 6.02 × 10²³ mol⁻¹។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>ដែកមួយម៉ូលមាន \(6.02\times10^{23}\) អាតូម។</p>\[m=nM=0.20\times56=11.2\,\text{g}\]<p>យកចំនួនម៉ូលគុណនឹងម៉ាសម៉ូល ដើម្បីបានឯកតាក្រាម។</p></div></details>
+</div>
+</section>
+
+<!-- ================= CHAPTER 2 ================= -->
+<section class="chapter" id="ch2">
+  <div class="chead"><span class="num">ជំពូកទី ២</span><h2>តារាងខួបនៃធាតុគីមី</h2></div>
+  <p>អ្នកវិទ្យាសាស្ត្ររុស្ស៊ី <b>ឌីមីទ្រី មិនដេលេយេវ</b> (១៨៣៤–១៩០៧) បានរៀបធាតុជាតារាង។ សព្វថ្ងៃ គេរៀបធាតុតាម<b>លំដាប់កើននៃលេខអាតូម \(Z\)</b>។</p>
+
+  <h3 id="c2-table"><span class="n">២.១</span>ក្រុម និងខួប</h3>
+  <div class="two">
+    <div class="cmp"><h4>ក្រុម = ជួរឈរ</h4>ធាតុក្នុងក្រុមតែមួយ មាន<b>ចំនួនអេឡិចត្រុងវ៉ាឡង់ដូចគ្នា</b> ដូច្នេះមានលក្ខណៈគីមីប្រហាក់ប្រហែលគ្នា។ លេខក្រុម (I–VIII) = ចំនួនអេឡិចត្រុងវ៉ាឡង់។</div>
+    <div class="cmp"><h4>ខួប = ជួរដេក</h4>ធាតុក្នុងខួបតែមួយ មាន<b>ចំនួនស្រទាប់អេឡិចត្រុងដូចគ្នា</b>។ លេខខួប = ចំនួនស្រទាប់។ ពីឆ្វេងទៅស្តាំ លក្ខណៈប្រែពីលោហៈ ទៅអលោហៈ។</div>
+  </div>
+  
+<aside class="learn-connection" id="connect-periodic-shells"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អានរបាយធាតុដោយប្រើ <a href="#c1-shell">ស្រទាប់អេឡិចត្រុង (§១.៤)</a>៖ Mg = 2,8,2 មានបីស្រទាប់ → ខួបទី 3 និងអេឡិចត្រុងក្រៅពីរ → ក្រុម II។ វិធី I–VIII ប្រើសម្រាប់ធាតុក្រុមសំខាន់ (He មាន 2) មិនប្រើកំណត់វ៉ាឡង់របស់ <a href="#c2-tr">លោហៈឆ្លង (§២.៥)</a> ទេ។</aside>
+<div class="key valbox"><span class="lab">អេឡិចត្រុងវ៉ាឡង់ ជាអ្វី?</span><br>
+    <b>អេឡិចត្រុងវ៉ាឡង់</b> គឺជាអេឡិចត្រុងនៅ<b>ស្រទាប់ក្រៅបង្អស់</b>នៃអាតូម។ អេឡិចត្រុងទាំងនេះចូលរួមក្នុងប្រតិកម្មគីមី និងការបង្កើតសម្ព័ន្ធ ដូច្នេះវាសម្រេចលក្ខណៈគីមីនៃធាតុ។
+    <b>របៀបរក</b>៖ សរសេររបាយអេឡិចត្រុង ហើយមើល<b>លេខចុងក្រោយ</b>។
+    <div class="tbl" style="margin:8px 0 6px"><table>
+      <thead><tr><th>ធាតុ</th><th>Li</th><th>Na</th><th>Mg</th><th>C</th><th>O</th><th>Cl</th><th>Ar</th></tr></thead>
+      <tbody>
+        <tr><th>របាយ e⁻</th><td>2, <b>1</b></td><td>2, 8, <b>1</b></td><td>2, 8, <b>2</b></td><td>2, <b>4</b></td><td>2, <b>6</b></td><td>2, 8, <b>7</b></td><td>2, 8, <b>8</b></td></tr>
+        <tr><th>e⁻ វ៉ាឡង់ = ក្រុម</th><td>1 (I)</td><td>1 (I)</td><td>2 (II)</td><td>4 (IV)</td><td>6 (VI)</td><td>7 (VII)</td><td>8 (VIII)</td></tr>
+      </tbody></table></div>
+    <ul>
+      <li>Li និង Na មាន 1 អេឡិចត្រុងវ៉ាឡង់ដូចគ្នា → នៅក្រុម I ដូចគ្នា ហើយធ្វើប្រតិកម្មស្រដៀងគ្នា (ឧ. ជាមួយទឹក)។</li>
+      <li>លោហៈ (1–3 e⁻ វ៉ាឡង់) ងាយ<b>បោះបង់</b>អេឡិចត្រុង → អ៊ីយ៉ុងវិជ្ជមាន (Na⁺) · អលោហៈ (5–7) ងាយ<b>ទទួល</b> ឬ<b>ដាក់រួម</b> → អ៊ីយ៉ុងអវិជ្ជមាន (Cl⁻) ឬសម្ព័ន្ធកូវ៉ាឡង់ · ឧស្ម័នកម្រ (8, He មាន 2) ស្ទើរតែមិនធ្វើប្រតិកម្ម។</li>
+      <li class="muted">ច្បាប់ «ក្រុម = ចំនួនអេឡិចត្រុងវ៉ាឡង់» ប្រើសម្រាប់ធាតុក្រុមធំ (A)។ ចំពោះ<b>លោហៈឆ្លង</b> អេឡិចត្រុងនៃស្រទាប់ខាងក្នុងបន្ទាប់ ក៏អាចចូលរួម<b>ក្នុងប្រតិកម្មគីមី</b>ដែរ គឺអាតូមអាចបោះបង់វា ដើម្បីបង្កើតអ៊ីយ៉ុង ឬប្រើវាដើម្បីបង្កើតសម្ព័ន្ធ។ ឧ. Fe (2, 8, 14, 2) បោះបង់ 2 អេឡិចត្រុងក្រៅ → \(\mathrm{Fe^{2+}}\) (2, 8, 14) ហើយអាចបោះបង់ 1 ទៀតពីស្រទាប់ M → \(\mathrm{Fe^{3+}}\) (2, 8, 13)។ ហេតុនេះ លោហៈឆ្លងមាន<b>វ៉ាឡង់ប្រែប្រួល</b> (មើល ២.៥)។</li>
+    </ul>
+  </div>
+  <div class="widget" id="fullPT">
+    <div class="wt"><span>សាកល្បង</span>តារាងខួបពេញលេញ (ធាតុ ១១៨)</div>
+    <p class="muted" style="margin:0 0 6px">ចុចលើធាតុណាមួយ ដើម្បីមើលព័ត៌មានលម្អិត។ ចុចលើប្រភេទធាតុ ដើម្បីបន្លិចធាតុក្នុងប្រភេទនោះ។</p>
+    <div class="ptf-scroll"><div class="ptf" id="ptf" data-grp="ក្រុម" data-per="ខួប" data-ln="ឡង់តានីត" data-ac="អាក់ទីនីត"></div></div>
+    <div class="ptf-legend"><button type="button" class="ptc-leg" data-cat="alk" aria-pressed="false"><i class="ptc-alk"></i>លោហៈអាល់កាឡាំង</button><button type="button" class="ptc-leg" data-cat="ae" aria-pressed="false"><i class="ptc-ae"></i>លោហៈអាល់កាឡាំងលើដី</button><button type="button" class="ptc-leg" data-cat="tr" aria-pressed="false"><i class="ptc-tr"></i>លោហៈឆ្លង</button><button type="button" class="ptc-leg" data-cat="post" aria-pressed="false"><i class="ptc-post"></i>លោហៈក្រោយឆ្លង</button><button type="button" class="ptc-leg" data-cat="mtd" aria-pressed="false"><i class="ptc-mtd"></i>ធាតុអំផូទែ</button><button type="button" class="ptc-leg" data-cat="non" aria-pressed="false"><i class="ptc-non"></i>អលោហៈ</button><button type="button" class="ptc-leg" data-cat="hal" aria-pressed="false"><i class="ptc-hal"></i>អាឡូសែន</button><button type="button" class="ptc-leg" data-cat="nob" aria-pressed="false"><i class="ptc-nob"></i>ឧស្ម័នកម្រ</button><button type="button" class="ptc-leg" data-cat="lan" aria-pressed="false"><i class="ptc-lan"></i>ឡង់តានីត</button><button type="button" class="ptc-leg" data-cat="act" aria-pressed="false"><i class="ptc-act"></i>អាក់ទីនីត</button></div>
+    <div class="ptf-info" id="ptfInfo" aria-live="polite">
+      <div class="ptf-big"><small id="pfZ">11</small><b id="pfSym">Na</b><span id="pfName">—</span><span id="pfMass" class="pfm">22.990</span></div>
+      <div class="readout" style="margin:0">
+        <div><small>លេខអាតូម Z</small><b id="pfZ2">—</b></div>
+        <div><small>ម៉ាសអាតូម · ម៉ាសម៉ូល</small><b id="pfM2">—</b></div>
+        <div><small>ប្រភេទ</small><b id="pfCat" style="font-size:15px">—</b></div>
+        <div><small>ក្រុម · ខួប</small><b id="pfGP" style="font-size:15px">—</b></div>
+        <div><small>របាយអេឡិចត្រុង</small><b id="pfSh" style="font-size:16px">—</b></div>
+        <div><small class="c-neu">ចំនួនណឺត្រុង n</small><b id="pfN" style="font-size:16px">—</b></div>
+      </div>
+      <figure class="ptf-mini"><div class="seg pf-model-controls" role="group" aria-label="ម៉ូដែលគំនូរអាតូម"><button type="button" id="pfBohr" class="on" aria-pressed="true">ម៉ូដែល Bohr</button><button type="button" id="pfCloud" aria-pressed="false">ពពកអេឡិចត្រុង</button></div><svg id="pfMini" viewBox="0 0 200 200" role="img" aria-label="គំរូអាតូមនៃធាតុដែលបានជ្រើស"></svg><figcaption id="pfMiniCap">អេឡិចត្រុងក្នុងស្រទាប់នីមួយៗ</figcaption><p class="pf-model-hint" id="pfModelHint">Bohr៖ រាប់អេឡិចត្រុងតាមស្រទាប់។ ពពក៖ រូបភាពសាមញ្ញនៃដង់ស៊ីតេប្រូបាប៊ីលីតេ មិនមែនគន្លងអេឡិចត្រុងទេ។ <a href="#c1-electron-cloud">ស្វែងយល់អំពីម៉ូដែល</a></p></figure>
+      <button type="button" class="pri" id="pfAtom">មើលក្នុងគំរូអាតូម ↑</button>
+    </div>
+    <p class="muted" style="font-size:13px;margin:8px 0 0">ម៉ាសក្នុង [ ] ជាចំនួនម៉ាសនៃអ៊ីសូតូបមានស្ថិរភាពជាងគេ (ធាតុវិទ្យុសកម្ម)។ លេខរ៉ូម៉ាំង (I–VIII) ជាលេខក្រុមដែលប្រើក្នុងសៀវភៅ។</p>
+  </div>
+  <div class="ex"><span class="lab">ឧទាហរណ៍ ខួបទី ៣</span>
+    <div class="tbl" style="margin:6px 0 0"><table>
+      <thead><tr><th>ធាតុ</th><th>Na</th><th>Mg</th><th>Al</th><th>Si</th><th>P</th><th>S</th><th>Cl</th><th>Ar</th></tr></thead>
+      <tbody>
+        <tr><th>របាយ e⁻</th><td>2,8,1</td><td>2,8,2</td><td>2,8,3</td><td>2,8,4</td><td>2,8,5</td><td>2,8,6</td><td>2,8,7</td><td>2,8,8</td></tr>
+        <tr><th>អ៊ីយ៉ុង</th><td>\(\mathrm{Na^+}\)</td><td>\(\mathrm{Mg^{2+}}\)</td><td>\(\mathrm{Al^{3+}}\)</td><td>—</td><td>\(\mathrm{P^{3-}}\)</td><td>\(\mathrm{S^{2-}}\)</td><td>\(\mathrm{Cl^-}\)</td><td>—</td></tr>
+        <tr><th>ប្រភេទ</th><td colspan="3" style="background:color-mix(in srgb,var(--metal) 14%,var(--card))">លោហៈ</td><td style="background:color-mix(in srgb,var(--metalloid) 18%,var(--card))">អំផូទែ</td><td colspan="3" style="background:color-mix(in srgb,var(--nonmetal) 16%,var(--card))">អលោហៈ</td><td style="background:color-mix(in srgb,var(--noble) 16%,var(--card))">កម្រ</td></tr>
+      </tbody></table></div></div>
+  <div class="tbl"><table>
+    <thead><tr><th>លោហៈ</th><th>អលោហៈ</th></tr></thead>
+    <tbody>
+      <tr><td class="l">ជាអង្គធាតុរឹង (លើកលែង Hg ជាអង្គធាតុរាវ)</td><td class="l">ភាគច្រើនជាឧស្ម័ន ឬអង្គធាតុរឹង (Br₂ ជាអង្គធាតុរាវ)</td></tr>
+      <tr><td class="l">ចម្លងកម្តៅ និងអគ្គិសនីបានល្អ · មានពន្លឺភ្លឺរលោង</td><td class="l">ចម្លងកម្តៅ និងអគ្គិសនីខ្សោយ (លើកលែងក្រាភីត)</td></tr>
+      <tr><td class="l">បោះបង់អេឡិចត្រុង → <b>អ៊ីយ៉ុងវិជ្ជមាន</b> (កាចុង)</td><td class="l">ទទួលអេឡិចត្រុង → <b>អ៊ីយ៉ុងអវិជ្ជមាន</b> (អាញ៉ុង)</td></tr>
+      <tr><td class="l">អុកស៊ីតរបស់វាជាបាស</td><td class="l">អុកស៊ីតរបស់វាជាអាស៊ីត</td></tr>
+    </tbody></table></div>
+  <p class="muted">ធាតុនៅជិតបន្ទាត់ជណ្តើរ (B, Si, Ge, As …) មានលក្ខណៈពាក់កណ្តាលលោហៈ ពាក់កណ្តាលអលោហៈ ហៅថា <b>ធាតុអំផូទែ</b>។</p>
+
+  <h3 id="c2-alk"><span class="n">២.២</span>ក្រុម I៖ លោហៈអាល់កាឡាំង</h3>
+  <div class="two" style="align-items:start">
+    <div>
+      <p><span class="pill">Li</span><span class="pill">Na</span><span class="pill">K</span><span class="pill">Rb</span><span class="pill">Cs</span><span class="pill">Fr</span> មាន <b>1 អេឡិចត្រុងវ៉ាឡង់</b> ដូច្នេះងាយបោះបង់វា ហើយក្លាយជាអ៊ីយ៉ុង \(\mathrm{M^+}\)។</p>
+<aside class="learn-connection" id="connect-alkali-ions"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អេឡិចត្រុងវ៉ាឡង់មួយនេះឃើញក្នុង <a href="#c1-shell">របាយស្រទាប់ (§១.៤)</a>។ ការបោះបង់វាបង្កើត M⁺; M⁺ រួមជាមួយអ៊ីយ៉ុងហាឡូសែន X⁻ បង្កើតអំបិល MX ដែលអព្យាក្រឹត ដូចពន្យល់ក្នុង <a href="#c3-ion">សម្ព័ន្ធអ៊ីយ៉ុង (§៣.២)</a>។</aside>
+
+      <ul>
+        <li>ទន់ (កាត់បានដោយកាំបិត) ដង់ស៊ីតេ និងចំណុចរលាយទាប</li>
+        <li>សកម្មខ្លាំង → គេរក្សាវាក្នុងប្រេងកាត</li>
+        <li>សកម្មភាព<b>កើនឡើង ពីលើចុះក្រោម</b> (Li &lt; Na &lt; K &lt; Rb &lt; Cs) — <a href="#c2-alk-why">ហេតុអ្វី? មើលការពន្យល់</a></li>
+        <li>ពណ៌អណ្តាតភ្លើង៖ Li <b style="color:#e03131">ក្រហម</b> · Na <b style="color:#f08c00">លឿង</b> · K <b style="color:#9c36b5">ស្វាយ</b></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rx"><span class="lab">ជាមួយទឹក → បាស + អ៊ីដ្រូសែន</span>\[\ce{2Na(s) + 2H2O(l) -> 2NaOH(aq) + H2(g)}\]</div>
+      <div class="rx"><span class="lab">ជាមួយក្លរ → អំបិល</span>\[\ce{2Na(s) + Cl2(g) -> 2NaCl(s)}\]</div>
+      <div class="rx"><span class="lab">ជាមួយអុកស៊ីសែន → អុកស៊ីត</span>\[\ce{4Na(s) + O2(g) -> 2Na2O(s)}\]</div>
+    </div>
+  </div>
+
+  <div class="key" id="c2-alk-why" style="scroll-margin-top:80px">
+<h4>ហេតុអ្វីសកម្មភាពគីមីកើនឡើងពីលើចុះក្រោមក្រុម I?</h4>
+<p>រំលឹកមេរៀនអំពី <a href="#c1-struct">ណ្វៃយ៉ូវិជ្ជមាន និងអេឡិចត្រុងអវិជ្ជមាន (§១.២)</a> និង <a href="#c1-shell">ស្រទាប់អេឡិចត្រុង និងអេឡិចត្រុងវ៉ាឡង់ (§១.៤)</a>។ លោហៈអាល់កាឡាំងធ្វើប្រតិកម្មដោយបោះបង់អេឡិចត្រុងស្រទាប់ក្រៅមួយ ដើម្បីបង្កើត M⁺។</p>
+<ol><li><b>ចំនួនស្រទាប់កើនឡើង៖</b> Li មានរបាយ 2,1; Na មាន 2,8,1; K មាន 2,8,8,1។ ពីលើចុះក្រោម អេឡិចត្រុងស្រទាប់ក្រៅស្ថិតកាន់តែឆ្ងាយពីណ្វៃយ៉ូ។</li>
+<li><b>ឥទ្ធិពលបាំងកើនឡើង៖</b> អេឡិចត្រុងស្រទាប់ក្នុងបន្ថយកម្លាំងទាក់ទាញពីណ្វៃយ៉ូវិជ្ជមាន ដែលអេឡិចត្រុងស្រទាប់ក្រៅទទួល។ ទោះបីបន្ទុកណ្វៃយ៉ូកើនឡើងក៏ដោយ ឥទ្ធិពលនៃចម្ងាយ និងការបាំងមានឥទ្ធិពលខ្លាំងជាង សម្រាប់អេឡិចត្រុងស្រទាប់ក្រៅក្នុងក្រុមនេះ។</li>
+<li><b>បោះបង់អេឡិចត្រុងកាន់តែងាយ៖</b> ថាមពលដែលត្រូវការដើម្បីដកអេឡិចត្រុងនេះចេញថយចុះ (ថាមពលអ៊ីយ៉ូនីសកម្មទីមួយថយចុះ)។ ដូច្នេះ លោហៈធ្វើប្រតិកម្មកាន់តែងាយ។</li></ol>
+<p><b>ស្រទាប់កើន → ចម្ងាយ និងឥទ្ធិពលបាំងកើន → ងាយបោះបង់អេឡិចត្រុងស្រទាប់ក្រៅ → សកម្មភាពគីមីកើន។</b> ដូច្នេះ Li &lt; Na &lt; K &lt; Rb &lt; Cs។ នៅលក្ខខណ្ឌស្រដៀងគ្នា ប៉ូតាស្យូមមានប្រតិកម្មជាមួយទឹកខ្លាំងជាងសូដ្យូម ហើយសូដ្យូមខ្លាំងជាងលីចូម។</p>
+<p class="muted">ការពន្យល់នេះសម្រាប់លោហៈក្រុម I ដែលបោះបង់អេឡិចត្រុង។ មិនត្រូវយកទៅអនុវត្តផ្ទាល់ចំពោះហាឡូសែន ដែលទទួលអេឡិចត្រុងទេ។</p>
+</div>
+
+  <h3 id="c2-hal"><span class="n">២.៣</span>ក្រុម VII៖ អាឡូសែន</h3>
+  <p><span class="pill">F</span><span class="pill">Cl</span><span class="pill">Br</span><span class="pill">I</span> មាន <b>7 អេឡិចត្រុងវ៉ាឡង់</b>។ វាជាអលោហៈសកម្មខ្លាំង ចាប់យក 1 អេឡិចត្រុង ដើម្បីក្លាយជាអ៊ីយ៉ុង \(\mathrm{X^-}\)។ ម៉ូលេគុលមាន 2 អាតូម៖ \(\mathrm{F_2, Cl_2, Br_2, I_2}\)។ សកម្មភាព<b>ថយចុះ ពីលើចុះក្រោម</b>។</p>
+<aside class="learn-connection" id="connect-halogens-bonds"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អេឡិចត្រុងក្រៅប្រាំពីរភ្ជាប់ទៅ <a href="#c1-shell">ស្រទាប់ (§១.៤)</a>៖ ទទួលមួយទៀតបាន X⁻ ក្នុង <a href="#c3-ion">អំបិលអ៊ីយ៉ុង (§៣.២)</a> ខណៈអាតូមហាឡូសែនពីរអាចប្រើគូអេឡិចត្រុងរួម បង្កើត X₂ តាម <a href="#c3-cov">សម្ព័ន្ធកូវ៉ាឡង់ (§៣.១)</a>។ ពីលើចុះក្រោម ចម្ងាយ និងការបាំងធ្វើឱ្យការទាក់ទាញអេឡិចត្រុងចូលថ្មីខ្សោយ ដូច្នេះសកម្មភាពហាឡូសែនថយចុះ។</aside>
+
+  <div class="four">
+    <div class="cmp" style="border-top:5px solid #e9e27a"><h4>\(\mathrm{F_2}\)</h4>ឧស្ម័ន · លឿងស្លេក</div>
+    <div class="cmp" style="border-top:5px solid #94d82d"><h4>\(\mathrm{Cl_2}\)</h4>ឧស្ម័ន · លឿងបៃតង</div>
+    <div class="cmp" style="border-top:5px solid #a5402d"><h4>\(\mathrm{Br_2}\)</h4>រាវ · ក្រហមត្នោត</div>
+    <div class="cmp" style="border-top:5px solid #5f3dc4"><h4>\(\mathrm{I_2}\)</h4>រឹង · ពណ៌ស្វាយខ្មៅ</div>
+  </div>
+  <div class="rx"><span class="lab">ប្រតិកម្មជំនួស៖ អាឡូសែនសកម្មជាង ដេញអាឡូសែនខ្សោយជាង</span>\[\ce{Cl2(g) + 2KI(aq) -> 2KCl(aq) + I2(s)}\]</div>
+
+  <h3 id="c2-nob"><span class="n">២.៤</span>ក្រុម VIII៖ ឧស្ម័នកម្រ</h3>
+  <div class="two" style="align-items:center">
+    <p><span class="pill">He</span><span class="pill">Ne</span><span class="pill">Ar</span><span class="pill">Kr</span><span class="pill">Xe</span><span class="pill">Rn</span> មានស្រទាប់ក្រៅ<b>ពេញ</b> (8 អេឡិចត្រុង, He មាន 2)។ វាមានស្ថិរភាពខ្លាំង ស្ទើរតែមិនធ្វើប្រតិកម្ម ហើយមានជាម៉ូលេគុលមួយអាតូម។</p>
+<aside class="learn-connection" id="connect-noble-octet"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ស្រទាប់ពេញភ្ជាប់ <a href="#c1-shell">របាយអេឡិចត្រុង (§១.៤)</a> ទៅគោលការណ៍អុកតាក្នុង <a href="#c3-cov">សម្ព័ន្ធ (§៣.១)</a>។ Na⁺ មានរបាយដូច Ne ហើយ Cl⁻ ដូច Ar។ ពួកវានៅតែជាអ៊ីយ៉ុងសូដ្យូម និងក្លរ ព្រោះ <a href="#c1-struct">ចំនួនប្រូតុង (§១.២)</a> មិនប្ដូរ។</aside>
+
+    <div class="cmp"><h4>ប្រើប្រាស់</h4><b>He</b> បំពេញប៉េងប៉ោង និងនាវាអាកាស · <b>Ne</b> អំពូលភ្លើងផ្សាយពាណិជ្ជកម្ម · <b>Ar</b> បំពេញអំពូលភ្លើង</div>
+  </div>
+
+  <h3 id="c2-tr"><span class="n">២.៥</span>លោហៈឆ្លង</h3>
+  <p>ធាតុនៅផ្នែកកណ្តាលនៃតារាង (Fe, Cu, Cr, Ni, Zn …)។</p>
+  <div class="three">
+    <div class="cmp"><h4>រូប</h4>រឹង ដង់ស៊ីតេ និងចំណុចរលាយខ្ពស់ (ឧ. Fe 1535 °C)។ ចម្លងកម្តៅ-អគ្គិសនីល្អ។</div>
+    <div class="cmp"><h4>វ៉ាឡង់ប្រែប្រួល</h4>\(\mathrm{Fe^{2+}}\) / \(\mathrm{Fe^{3+}}\), \(\mathrm{Cu^{+}}\) / \(\mathrm{Cu^{2+}}\)។ សមាសធាតុមានពណ៌៖ \(\mathrm{Cu^{2+}}\) <b style="color:#1971c2">ខៀវ</b>, \(\mathrm{Fe^{2+}}\) <b style="color:#2f9e44">បៃតង</b>។</div>
+    <div class="cmp"><h4>កាតាលីករ</h4>Fe ក្នុងការផលិតអាម៉ូញ៉ាក់ (Haber) · \(\mathrm{V_2O_5}\) ក្នុងការផលិតអាស៊ីតស៊ុលផួរិច។</div>
+  </div>
+
+
+<aside class="learn-connection" id="connect-transition-applications"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> បន្ទុកអ៊ីយ៉ុងប្រែប្រួលកំណត់រូបមន្ត <a href="#c3-ion">សមាសធាតុអ៊ីយ៉ុង (§៣.២)</a>៖ Fe²⁺ ឱ្យ FeCl₂ ហើយ Fe³⁺ ឱ្យ FeCl₃។ ការចម្លងអគ្គិសនីភ្ជាប់ទៅ <a href="#c3-solid">អេឡិចត្រុងសេរីក្នុងលោហៈ (§៣.៣)</a>។ កាតាលីករលេចឡើងវិញ ពេល Ni ជួយ <a href="#c4-alkene">ប្រតិកម្មបូកអ៊ីដ្រូសែន (§៤.៣)</a> និង Fe ជួយផលិតអាម៉ូញ៉ាក់សម្រាប់ <a href="#c4-fert">ជី (§៤.៥)</a>។</aside>
+<div class="chapter-practice" id="practice-ch2">
+<h3>តារាងខួប៖ លំហាត់ពីសៀវភៅសិក្សា</h3>
+<p class="muted">សម្រួលពីលំហាត់ក្នុងសៀវភៅសិក្សា ទំព័រ 48–49 (លេខទំព័របោះពុម្ព)។ ដំណោះស្រាយបន្ថែមសម្រាប់គេហទំព័រនេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch2-1"><summary><span class="q">១.</span><span>តើតារាងខួបទំនើបរៀបធាតុតាមអ្វី៖ ចំនួនស្រទាប់ ចំនួនប្រូតុង សកម្មភាពគីមី ឬម៉ាសអាតូម?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>តាម<b>លំដាប់កើននៃចំនួនប្រូតុង (លេខអាតូម Z)</b>។ ធាតុបន្ទាប់នីមួយៗមានប្រូតុងកើនមួយ។ ខួបបង្ហាញចំនួនស្រទាប់អេឡិចត្រុងដែលមានអេឡិចត្រុង សម្រាប់អាតូមនៅស្ថានភាពគ្រឹះ។</p></div></details>
+<details id="practice-ch2-2"><summary><span class="q">២.</span><span>តើលេខអាតូមក្រុមណាជាលោហៈអាល់កាឡាំង៖ (7,23,39), (12,20,38), (18,36,54) ឬ (19,37,55)? ចូរប្រាប់ឈ្មោះធាតុដែលត្រឹមត្រូវ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>19,37,55៖</b> ប៉ូតាស្យូម K រុយប៊ីដ្យូម Rb និងសេស្យូម Cs។ ពួកវានៅក្រុម I (ក្រុម 1 តាមប្រព័ន្ធទំនើប) មានអេឡិចត្រុងស្រទាប់ក្រៅមួយ និងងាយបង្កើតអ៊ីយ៉ុង +1។</p></div></details>
+<details id="practice-ch2-3"><summary><span class="q">៣.</span><span>ចូរជ្រើសធាតុក្រុម I ពី Mg, Fe, Cu និង K។ សរសេរអ៊ីយ៉ុងរបស់វា និងពន្យល់ពីការកកើតអ៊ីយ៉ុងនេះ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>ប៉ូតាស្យូម K។</b> វាបោះបង់អេឡិចត្រុងស្រទាប់ក្រៅមួយ៖</p>\[\ce{K -> K+ + e-}\]<p>Mg នៅក្រុម II រីឯ Fe និង Cu នៅប្លុកលោហៈកណ្ដាលតារាង។</p></div></details>
+<details id="practice-ch2-4"><summary><span class="q">៤.</span><span>ចូរប្រាប់ការប្រែប្រួលពណ៌ ភាពរូប និងសកម្មភាពគីមីរបស់ហាឡូសែន ពីលើចុះក្រោមក្រុម VII។ តើសកម្មភាពគីមីកើនឡើងឬទេ?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>ពណ៌ជាទូទៅកាន់តែចាស់។ នៅសីតុណ្ហភាពបន្ទប់ F₂ និង Cl₂ ជាឧស្ម័ន Br₂ ជាអង្គធាតុរាវ និង I₂ ជាអង្គធាតុរឹង។ សកម្មភាពគីមី<b>ថយចុះ</b>ពីលើចុះក្រោម៖ F₂ &gt; Cl₂ &gt; Br₂ &gt; I₂។</p></div></details>
+<details id="practice-ch2-5"><summary><span class="q">៥.</span><span>ធាតុ X នៅក្រុម VII ក្រោមក្លរ។ តើប្រយោគណាខុស៖ X អាចជំនួសក្លរពី KCl; ម៉ូលេគុល X មានពីរអាតូម; X មានប្រតិកម្មជាមួយសូដ្យូមបង្កើតសមាសធាតុអ៊ីយ៉ុង? ពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>«X អាចជំនួសក្លរពី KCl» ខុស។</b> X មានសកម្មភាពខ្សោយជាងក្លរ ដូច្នេះមិនអាចជំនួសក្លរបានទេ។ ប្រយោគពីរទៀតត្រូវសម្រាប់ប្រូម ឬអ៊ីយ៉ូត។ ហាឡូសែនសកម្មខ្លាំងជាងអាចជំនួសហាឡូសែនសកម្មខ្សោយជាងពីអំបិលរបស់វា។</p></div></details>
+<details id="practice-ch2-6"><summary><span class="q">៦.</span><span>សិស្សម្នាក់ថា «ម៉ូលេគុលសេណុងមានពីរអាតូម ហើយសេណុងងាយឆេះ»។ ចូរកែកំហុសទាំងពីរ និងពន្យល់មូលហេតុដែលសេណុងមិនសូវមានប្រតិកម្ម។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>សេណុងមានជា<b>អាតូមទោល Xe</b> ហើយមិនឆេះទេ។ ស្រទាប់ក្រៅពេញធ្វើឱ្យវាមិនសូវមានប្រតិកម្ម។ នេះមិនមានន័យថា វាមិនអាចបង្កើតសមាសធាតុក្រោមលក្ខខណ្ឌពិសេសទេ។</p></div></details>
+<details id="practice-ch2-7"><summary><span class="q">៧.</span><span>តើរូបមន្តសមាសធាតុបារីយ៉ូមណាខុស៖ BaCl₂, Ba(OH)₂, BaNO₃, BaSO₄? កែតម្រូវដោយប្រើបន្ទុកអ៊ីយ៉ុង។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>BaNO₃ ខុស។</b> បារីយ៉ូមជា \(\ce{Ba^{2+}}\) ហើយនីត្រាតជា \(\ce{NO3-}\)។ ត្រូវការអ៊ីយ៉ុងនីត្រាតពីរ ដើម្បីបន្សាបបន្ទុក +2 ដូច្នេះរូបមន្តត្រឹមត្រូវគឺ \(\ce{Ba(NO3)2}\)។ រូបមន្តផ្សេងទៀតមានបន្ទុកសរុបសូន្យ។</p></div></details>
+<details id="practice-ch2-8"><summary><span class="q">៨.</span><span>X, Y និង Z នៅក្នុងខួបតែមួយ។ X ជាលោហៈ Y ជាអលោហៈ និង Z ជាឧស្ម័នកម្រ។ ចូររៀបពីឆ្វេងទៅស្ដាំ និងពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>X → Y → Z។</b> លោហៈស្ថិតនៅខាងឆ្វេង អលោហៈស្ថិតនៅខាងស្ដាំ និងឧស្ម័នកម្រនៅក្រុមចុងក្រោយនៃខួប។ ឧទាហរណ៍៖ Na → Cl → Ar។</p></div></details>
+</div>
+
+<div class="chapter-practice" id="practice-ch2-transition">
+<h3>លោហៈឆ្លង៖ សាកល្បងសមត្ថភាព</h3>
+<p class="muted">លំហាត់បន្ថែមសម្រាប់វាយតម្លៃសមត្ថភាព ផ្អែកលើមេរៀននេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch2-transition-1"><summary><span class="q">១.</span><span>ចូរប្រាប់លក្ខណៈរូបពីរដែលធ្វើឱ្យទង់ដែងសមស្របសម្រាប់ធ្វើខ្សែអគ្គិសនី និងពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>ចម្លងអគ្គិសនីបានល្អ៖</b> អេឡិចត្រុងសេរីអាចផ្លាស់ទីនាំបន្ទុកក្នុងលោហៈ។ <b>អាចទាញជាសរសៃបាន៖</b> ទង់ដែងអាចទាញជាខ្សែវែង និងស្ដើងដោយមិនបាក់។</p></div></details>
+<details id="practice-ch2-transition-2"><summary><span class="q">២.</span><span>ដែកបង្កើតអ៊ីយ៉ុង Fe²⁺ និង Fe³⁺។ សរសេររូបមន្តដែក(II) ក្លរួ និងដែក(III) ក្លរួ។ ហេតុអ្វីរូបមន្តខុសគ្នា?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>អ៊ីយ៉ុងក្លរួមានបន្ទុក −1។ តាមតុល្យភាពបន្ទុក បាន \(\ce{FeCl2}\) សម្រាប់ Fe²⁺ និង \(\ce{FeCl3}\) សម្រាប់ Fe³⁺។ ដែកមានលេខអុកស៊ីតកម្មប្រែប្រួល ដូច្នេះត្រូវការចំនួនអ៊ីយ៉ុងក្លរួខុសគ្នា។</p></div></details>
+<details id="practice-ch2-transition-3"><summary><span class="q">៣.</span><span>តើកាតាលីករជាអ្វី? ប្រាប់ឈ្មោះកាតាលីករក្នុងដំណើរការហាប៊ែរ។ តើវាត្រូវបានប្រើអស់ជាសរុបក្នុងប្រតិកម្មឬទេ?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>កាតាលីករបង្កើនល្បឿនប្រតិកម្ម ដោយផ្តល់ផ្លូវប្រតិកម្មដែលមានថាមពលសកម្មទាបជាង។ <b>ដែក</b>ជាកាតាលីករសម្រាប់ផលិតអាម៉ូញ៉ាក់តាមដំណើរការហាប៊ែរ។ វាចូលរួមក្នុងជំហានប្រតិកម្ម ប៉ុន្តែកកើតឡើងវិញ ដូច្នេះមិនត្រូវបានប្រើអស់ជាសរុបទេ។</p></div></details>
+<details id="practice-ch2-transition-4"><summary><span class="q">៤.</span><span>សូលុយស្យុងបៃតងស្រាលអាចមាន Fe²⁺ ហើយសូលុយស្យុងខៀវអាចមាន Cu²⁺។ តើពណ៌តែមួយអាចបញ្ជាក់ច្បាស់អំពីអ៊ីយ៉ុងបានឬទេ? ពន្យល់។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>មិនអាចទេ។</b> នេះជាពណ៌ទូទៅនៃអ៊ីយ៉ុងដែលភ្ជាប់ជាមួយទឹក ប៉ុន្តែសារធាតុផ្សេងអាចមានពណ៌ស្រដៀងគ្នា ហើយកំហាប់ប៉ះពាល់ដល់ភាពចាស់នៃពណ៌។ ពណ៌គ្រាន់តែជាតម្រុយ ត្រូវការតេស្តគីមីបន្ថែមដើម្បីបញ្ជាក់។</p></div></details>
+</div>
+</section>
+
+<!-- ================= CHAPTER 3 ================= -->
+<section class="chapter" id="ch3">
+  <div class="chead"><span class="num">ជំពូកទី ៣</span><h2>សម្ព័ន្ធគីមី និងទម្រង់អង្គធាតុរឹង</h2></div>
+  <div class="key"><span class="lab">ច្បាប់អុកតេ</span><br>អាតូមមាននិន្នាការ ផ្តល់ ទទួល ឬដាក់រួមអេឡិចត្រុង ដើម្បីឱ្យស្រទាប់ក្រៅមាន <b>8 អេឡិចត្រុង</b> (ដូចឧស្ម័នកម្រ) ឬ 2 ចំពោះ H (ដូច He)។</div>
+
+  <h3 id="c3-cov"><span class="n">៣.១</span>សម្ព័ន្ធកូវ៉ាឡង់ (ដាក់រួមអេឡិចត្រុង)</h3>
+  <p>កើតឡើងរវាង<b>អលោហៈ និងអលោហៈ</b>។ អាតូមនីមួយៗដាក់អេឡិចត្រុងរួមគ្នា ១ គូ (សម្ព័ន្ធទោល), ២ គូ (សម្ព័ន្ធពីរជាន់) ឬ ៣ គូ (សម្ព័ន្ធបីជាន់)។</p>
+<aside class="learn-connection" id="connect-covalent-carbon"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ប្រើ <a href="#c1-shell">អេឡិចត្រុងវ៉ាឡង់ (§១.៤)</a> ដើម្បីរាប់សម្ព័ន្ធ៖ ក្នុងម៉ូលេគុលអព្យាក្រឹត H ជាទូទៅបង្កើតមួយសម្ព័ន្ធ O ពីរ និង C បួន។ នេះពន្យល់ CH₄ និងសម្ព័ន្ធកាបូនទោល ទ្វេ និងត្រី ក្នុង <a href="#c4-alkane">អាល់កាន (§៤.២)</a> និង <a href="#c4-alkene">អាល់សែន/អាល់ស៊ីន (§៤.៣)</a>។ គោលការណ៍អុកតាជាគោលណែនាំដែលមានករណីលើកលែង មិនមែនកម្លាំងដែលធ្វើឱ្យអាតូម «ចង់» បានប្រាំបីអេឡិចត្រុងទេ។</aside>
+
+  <figure>
+    <svg viewBox="0 0 700 170" role="img" aria-label="ឧទាហរណ៍ម៉ូលេគុលកូវ៉ាឡង់">
+      <!-- H2 -->
+      <circle cx="40" cy="70" r="22" fill="url(#gH)" stroke="#adb5bd"/><circle cx="72" cy="70" r="22" fill="url(#gH)" stroke="#adb5bd"/>
+      <text x="56" y="128" text-anchor="middle" class="at">H–H</text><text x="56" y="150" text-anchor="middle" class="sm">H₂ · សម្ព័ន្ធទោល</text>
+      <!-- O2 -->
+      <circle cx="170" cy="70" r="26" fill="url(#gO)"/><circle cx="208" cy="70" r="26" fill="url(#gO)"/>
+      <text x="189" y="128" text-anchor="middle" class="at">O=O</text><text x="189" y="150" text-anchor="middle" class="sm">O₂ · សម្ព័ន្ធពីរជាន់</text>
+      <!-- H2O -->
+      <line x1="320" y1="62" x2="292" y2="92" style="stroke:#adb5bd;stroke-width:7"/><line x1="320" y1="62" x2="348" y2="92" style="stroke:#adb5bd;stroke-width:7"/>
+      <circle cx="320" cy="60" r="24" fill="url(#gO)"/><circle cx="290" cy="94" r="15" fill="url(#gH)" stroke="#adb5bd"/><circle cx="350" cy="94" r="15" fill="url(#gH)" stroke="#adb5bd"/>
+      <text x="320" y="135" text-anchor="middle" class="at" style="font-size:15px">H–O–H</text><text x="320" y="155" text-anchor="middle" class="sm">H₂O · ទឹក</text>
+      <!-- CH4 -->
+      <line x1="450" y1="70" x2="450" y2="26" style="stroke:#adb5bd;stroke-width:7"/><line x1="450" y1="70" x2="414" y2="94" style="stroke:#adb5bd;stroke-width:7"/><line x1="450" y1="70" x2="486" y2="94" style="stroke:#adb5bd;stroke-width:7"/><line x1="450" y1="70" x2="462" y2="104" style="stroke:#adb5bd;stroke-width:7"/>
+      <circle cx="450" cy="70" r="20" fill="url(#gC)"/>
+      <circle cx="450" cy="24" r="13" fill="url(#gH)" stroke="#adb5bd"/><circle cx="412" cy="96" r="13" fill="url(#gH)" stroke="#adb5bd"/><circle cx="488" cy="96" r="13" fill="url(#gH)" stroke="#adb5bd"/><circle cx="463" cy="108" r="13" fill="url(#gH)" stroke="#adb5bd"/>
+      <text x="450" y="140" text-anchor="middle" class="at" style="font-size:15px">CH₄</text><text x="450" y="158" text-anchor="middle" class="sm">មេតាន · តេត្រាអ៊ែត</text>
+      <!-- CO2 -->
+      <line x1="560" y1="66" x2="660" y2="66" style="stroke:#adb5bd;stroke-width:5"/><line x1="560" y1="76" x2="660" y2="76" style="stroke:#adb5bd;stroke-width:5"/>
+      <circle cx="568" cy="71" r="22" fill="url(#gO)"/><circle cx="610" cy="71" r="20" fill="url(#gC)"/><circle cx="652" cy="71" r="22" fill="url(#gO)"/>
+      <text x="610" y="128" text-anchor="middle" class="at">O=C=O</text><text x="610" y="150" text-anchor="middle" class="sm">CO₂ · ត្រង់</text>
+    </svg>
+    <figcaption><b>រូបទី ៤</b> ម៉ូលេគុលកូវ៉ាឡង់៖ ខ្សែនីមួយៗ = អេឡិចត្រុងរួម ១ គូ</figcaption>
+  </figure>
+  <div class="two" style="align-items:center">
+    <figure class="card-fig">
+      <svg viewBox="0 0 320 150" role="img" aria-label="អេឡិចត្រុងរួមក្នុង Cl2">
+        <circle cx="120" cy="70" r="52" style="fill:var(--nonmetal);opacity:.08;stroke:var(--nonmetal)"/>
+        <circle cx="200" cy="70" r="52" style="fill:var(--nonmetal);opacity:.08;stroke:var(--nonmetal)"/>
+        <text x="100" y="77" class="at">Cl</text><text x="200" y="77" class="at">Cl</text>
+        <g id="cl2dots"></g>
+        <text x="160" y="140" text-anchor="middle" class="sm">អេឡិចត្រុងវ៉ាឡង់ 7 + 7 · គូរួម 1 → នីមួយៗមាន 8</text>
+      </svg>
+      <figcaption><b>រូបទី ៥</b> ក្លរ \(\mathrm{Cl_2}\)៖ <span class="c-ele">●</span> Cl ទី១ · <span class="c-pro">●</span> Cl ទី២</figcaption>
+    </figure>
+    <div class="key"><span class="lab">ចំណាំ</span><br>អាតូមដែលមានអេឡិចត្រុងវ៉ាឡង់ 7 ត្រូវការ 1 គូរួម (Cl–Cl), 6 → 2 គូ (O=O), 5 → 3 គូ (N≡N)។<br>ចំណងរវាង H និង O, N ឬ F នៃម៉ូលេគុលផ្សេងគ្នា ហៅថា <b>សម្ព័ន្ធអ៊ីដ្រូសែន</b> (ឧ. រវាងម៉ូលេគុលទឹក)។</div>
+  </div>
+
+  <h3 id="c3-ion"><span class="n">៣.២</span>សម្ព័ន្ធអ៊ីយ៉ុង (ផ្ទេរអេឡិចត្រុង)</h3>
+  <p>កើតឡើងរវាង<b>លោហៈ</b> (ក្រុម I, II) និង<b>អលោហៈ</b> (ក្រុម VI, VII)។ លោហៈផ្ទេរអេឡិចត្រុងទៅអលោហៈ បង្កើតអ៊ីយ៉ុងបន្ទុកផ្ទុយគ្នា ដែលទាញគ្នាដោយកម្លាំងអគ្គិសនីស្តាទិច។</p>
+<aside class="learn-connection" id="connect-ionic-charge"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> រំលឹក <a href="#c1-struct">បន្ទុកភាគល្អិត (§១.២)</a> និង <a href="#c2-table">លំនាំតាមក្រុម (§២.១)</a>។ Mg បោះបង់ពីរអេឡិចត្រុង → Mg²⁺; Cl នីមួយៗទទួលមួយ → Cl⁻។ Cl⁻ ពីរបន្សាប Mg²⁺ មួយ បាន MgCl₂។ រូបមន្តនេះបង្ហាញសមាមាត្រអ៊ីយ៉ុងសាមញ្ញក្នុងបណ្ដាញ មិនមែនម៉ូលេគុល MgCl₂ ដាច់ដោយឡែកទេ។ វិធីតុល្យភាពបន្ទុកនេះក៏ពន្យល់ <a href="#connect-fertiliser-ions">អំបិលជី (§៤.៥)</a>។</aside>
+
+  <figure>
+    <svg viewBox="0 0 790 220" role="img" aria-label="Na ផ្ទេរអេឡិចត្រុងទៅ Cl">
+      <g id="ionNa" transform="translate(10,10)"></g>
+      <text x="200" y="118" style="font-size:24px">+</text>
+      <g id="ionCl" transform="translate(210,10)"></g>
+      <text x="408" y="118" style="font-size:24px">→</text>
+      <g id="ionNap" transform="translate(430,38) scale(.62)"></g>
+      <g id="ionClm" transform="translate(580,10)"></g>
+      <path d="M150 40 C220 -6 300 0 352 44" class="ln" style="stroke:var(--ele);stroke-dasharray:5 4" marker-end="url(#arE)"/>
+      <text x="250" y="16" text-anchor="middle" class="sm" style="fill:var(--ele)">ផ្ទេរ 1 e⁻</text>
+      <tx x="100" y="206" w="120">\mathrm{Na}\ (2,8,1)</tx><tx x="310" y="206" w="120">\mathrm{Cl}\ (2,8,7)</tx>
+      <tx x="492" y="206" w="120">\mathrm{Na^+}\ (2,8)</tx><tx x="670" y="206" w="120">\mathrm{Cl^-}\ (2,8,8)</tx>
+    </svg>
+    <figcaption><b>រូបទី ៦</b> ការបង្កើតសូដ្យូមក្លរួ៖ អ៊ីយ៉ុងទាំងពីរមានស្រទាប់ក្រៅពេញ</figcaption>
+  </figure>
+  <div class="rx">\[\ce{Na -> Na+ + e-}\qquad\qquad \ce{Cl + e- -> Cl-}\qquad\qquad \ce{Na+ + Cl- -> NaCl}\]</div>
+  <p>ឧទាហរណ៍សមាសធាតុអ៊ីយ៉ុង៖ \(\mathrm{NaCl}\) (អំបិល), \(\mathrm{CaO}\) (កំបោររស់), \(\mathrm{CaCO_3}\) (ថ្មកំបោរ), \(\mathrm{MgO}\), \(\mathrm{KF}\), \(\mathrm{NaHCO_3}\) (ម្សៅដុតនំ)។</p>
+  <div class="tbl"><table>
+    <thead><tr><th>លក្ខណៈ</th><th>សមាសធាតុអ៊ីយ៉ុង</th><th>សមាសធាតុកូវ៉ាឡង់ (ម៉ូលេគុល)</th></tr></thead>
+    <tbody>
+      <tr><td>សភាព</td><td>រឹង ជាគ្រីស្តាល់</td><td>ឧស្ម័ន រាវ ឬរឹង</td></tr>
+      <tr><td>ចំណុចរលាយ / រំពុះ</td><td>ខ្ពស់ (NaCl 801 °C / 1413 °C)</td><td>ទាប (CH₄ −182 °C / −161 °C)</td></tr>
+      <tr><td>ការរលាយក្នុងទឹក</td><td>ភាគច្រើនរលាយ</td><td>ភាគច្រើនមិនរលាយ (រលាយក្នុងសារធាតុរំលាយសរីរាង្គ)</td></tr>
+      <tr><td>ចម្លងអគ្គិសនី</td><td>ចម្លងពេលរលាយ ឬរលាយក្នុងទឹក</td><td>មិនចម្លង</td></tr>
+    </tbody></table></div>
+
+  <h3 id="c3-solid"><span class="n">៣.៣</span>ទម្រង់អង្គធាតុរឹង</h3>
+  <div class="four">
+    <figure class="card-fig">
+      <svg viewBox="0 0 200 150" role="img" aria-label="ទម្រង់ម៉ូលេគុល">
+        <g id="molS"></g>
+      </svg>
+      <figcaption><b>ម៉ូលេគុល</b><br>ទឹកកក, I₂ · ចំណុចរលាយទាប</figcaption>
+    </figure>
+    <figure class="card-fig">
+      <svg viewBox="0 0 200 150" role="img" aria-label="ក្រាភីត ស្រទាប់ប្រាំមួយជ្រុង">
+        <g id="graph"></g>
+      </svg>
+      <figcaption><b>ម៉ូលេគុលធំ</b><br>ពេជ្រ, ក្រាភីត, SiO₂ · ខ្ពស់ខ្លាំង</figcaption>
+    </figure>
+    <figure class="card-fig">
+      <svg viewBox="0 0 200 150" role="img" aria-label="បណ្តាញអ៊ីយ៉ុង NaCl">
+        <g id="lat"></g>
+      </svg>
+      <figcaption><b>អ៊ីយ៉ុង</b><br>NaCl, MgO · ខ្ពស់ · ផុយ</figcaption>
+    </figure>
+    <figure class="card-fig">
+      <svg viewBox="0 0 200 150" role="img" aria-label="សម្ព័ន្ធលោហៈ">
+        <g id="metl"></g>
+      </svg>
+      <figcaption><b>លោហៈ</b><br>Fe, Cu, Na · ចម្លងអគ្គិសនីល្អ</figcaption>
+    </figure>
+  </div>
+  
+<aside class="learn-connection" id="connect-structure-properties"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ត្រូវបែងចែកសម្ព័ន្ធ<b>ក្នុង</b>ម៉ូលេគុល ពីកម្លាំង<b>រវាង</b>ម៉ូលេគុល។ ការរំពុះសារធាតុម៉ូលេគុលជាទូទៅញែកម៉ូលេគុលចេញពីគ្នា ដោយមិនបំបែកសម្ព័ន្ធកូវ៉ាឡង់ក្នុងម៉ូលេគុលទេ។ នេះពន្យល់ការបំបែកតាមចំណុចរំពុះក្នុង <a href="#c4-oil">បំណិតប្រេងកាត (§៤.១)</a>។ លោហៈចម្លងតាមអេឡិចត្រុងសេរី រីឯសមាសធាតុអ៊ីយ៉ុងរាវចម្លងតាមអ៊ីយ៉ុងដែលអាចផ្លាស់ទី ភ្ជាប់ទៅ <a href="#c2-tr">លក្ខណៈលោហៈ (§២.៥)</a> និង <a href="#c3-ion">សម្ព័ន្ធអ៊ីយ៉ុង (§៣.២)</a>។</aside>
+<div class="tbl"><table>
+    <thead><tr><th>ទម្រង់</th><th>ភាគល្អិត</th><th>សម្ព័ន្ធរវាងភាគល្អិត</th><th>ចំណុចរំពុះ</th><th>ចម្លងអគ្គិសនី</th></tr></thead>
+    <tbody>
+      <tr><td>ម៉ូលេគុល</td><td class="l">ម៉ូលេគុលតូចៗ</td><td class="l">កម្លាំងអន្តរម៉ូលេគុលខ្សោយ</td><td>ទាប (&lt; 200 °C)</td><td>មិនចម្លង</td></tr>
+      <tr><td>ម៉ូលេគុលធំ</td><td class="l">អាតូម</td><td class="l">សម្ព័ន្ធកូវ៉ាឡង់ខ្លាំង</td><td>ខ្ពស់ខ្លាំង</td><td>មិនចម្លង (លើកលែងក្រាភីត)</td></tr>
+      <tr><td>អ៊ីយ៉ុង</td><td class="l">អ៊ីយ៉ុង + និង −</td><td class="l">សម្ព័ន្ធអ៊ីយ៉ុងខ្លាំង</td><td>ខ្ពស់</td><td>ពេលរលាយ ឬក្នុងទឹក</td></tr>
+      <tr><td>លោហៈ</td><td class="l">អ៊ីយ៉ុងវិជ្ជមាន + អេឡិចត្រុងសេរី</td><td class="l">សម្ព័ន្ធលោហៈ</td><td>ខ្ពស់</td><td>ចម្លង (រឹង និងរាវ)</td></tr>
+    </tbody></table></div>
+  <p class="muted"><b>ពេជ្រ</b>៖ C នីមួយៗភ្ជាប់នឹង C 4 ផ្សេងទៀត → រឹងបំផុត (កាត់កញ្ចក់)។ <b>ក្រាភីត</b>៖ C ភ្ជាប់នឹង 3 ជាស្រទាប់ប្រាំមួយជ្រុង ស្រទាប់រអិលលើគ្នា → ទន់ ប្រើធ្វើស្លាបប៉ាខ្មៅដៃ និងអេឡិចត្រូត។</p>
+
+<div class="chapter-practice" id="practice-ch3">
+<h3>សម្ព័ន្ធ និងអង្គធាតុរឹង៖ លំហាត់ពីសៀវភៅសិក្សា</h3>
+<p class="muted">សម្រួលពីលំហាត់ក្នុងសៀវភៅសិក្សា ទំព័រ 73–74 (លេខទំព័របោះពុម្ព)។ ដំណោះស្រាយបន្ថែមសម្រាប់គេហទំព័រនេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch3-1"><summary><span class="q">១.</span><span>ចូរពន្យល់ភាពខុសគ្នារវាងសម្ព័ន្ធអ៊ីយ៉ុង និងកូវ៉ាឡង់ ដោយផ្អែកលើអេឡិចត្រុង និងឱ្យឧទាហរណ៍មួយរៀងៗខ្លួន។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>អ៊ីយ៉ុង៖</b> ការផ្ទេរអេឡិចត្រុងបង្កើតអ៊ីយ៉ុងវិជ្ជមាន និងអវិជ្ជមាន ដែលទាក់ទាញគ្នាដោយកម្លាំងអេឡិចត្រូស្តាទិច ដូចជា NaCl។ <b>កូវ៉ាឡង់៖</b> អាតូមប្រើគូអេឡិចត្រុងរួមគ្នា ដូចជា H₂។ សម្ព័ន្ធអ៊ីយ៉ុងគឺកម្លាំងទាក់ទាញរវាងអ៊ីយ៉ុង។</p></div></details>
+<details id="practice-ch3-2"><summary><span class="q">២.</span><span>ភាគល្អិតមួយមាន 20 ប្រូតុង 20 ណឺត្រុង និង 18 អេឡិចត្រុង។ កំណត់ភាគល្អិត គណនាបន្ទុក និងសរសេរនិមិត្តសញ្ញា។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>\(Z=20\) គឺកាល់ស្យូម។ \(A=20+20=40\) និងបន្ទុក \(=20-18=+2\)។ ដូច្នេះវាជាកាចុងកាល់ស្យូម \(\ce{^{40}_{20}Ca^{2+}}\) មិនមែនអាតូមអព្យាក្រឹតទេ។</p></div></details>
+<details id="practice-ch3-3"><summary><span class="q">៣.</span><span>អង្គធាតុរឹងបីមានលក្ខណៈចម្លងអគ្គិសនី៖ A មិនចម្លងទាំងពេលរឹង និងរាវ; B ចម្លងតែពេលរាវ; C ចម្លងទាំងពីរ។ ចូរចាត់ប្រភេទ A, B និង C។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>A៖</b> ស្របនឹងអង្គធាតុរឹងម៉ូលេគុល (ទិន្នន័យនេះតែមួយមិនអាចបញ្ជាក់រចនាសម្ព័ន្ធបានដាច់ខាតទេ)។ <b>B៖</b> អង្គធាតុរឹងអ៊ីយ៉ុង អ៊ីយ៉ុងជាប់ទីតាំងនៅពេលរឹង ប៉ុន្តែអាចផ្លាស់ទីពេលរាវ។ <b>C៖</b> លោហៈ មានអេឡិចត្រុងសេរីនាំបន្ទុកទាំងពីរស្ថានភាព។</p></div></details>
+<details id="practice-ch3-4"><summary><span class="q">៤.</span><span>សេស្យូម Cs នៅក្រុម I។ រកចំនួនអេឡិចត្រុងវ៉ាឡង់ អ៊ីយ៉ុង រូបមន្តក្លរួ និងរូបមន្តអុកស៊ីតរបស់វា។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>Cs មាន<b>អេឡិចត្រុងវ៉ាឡង់មួយ</b> ហើយបោះបង់វាបង្កើត \(\ce{Cs+}\)។ ជាមួយ \(\ce{Cl-}\) សមាមាត្រ 1:1 → \(\ce{CsCl}\)។ ជាមួយ \(\ce{O^{2-}}\) ត្រូវការ Cs⁺ ពីរ ដើម្បីបន្សាប O²⁻ មួយ → \(\ce{Cs2O}\) (អុកស៊ីតសាមញ្ញ)។</p></div></details>
+<details id="practice-ch3-5"><summary><span class="q">៥.</span><span>តើគូធាតុណាបង្កើតសមាសធាតុដែលមានសមាមាត្រអាតូម 1:1៖ Mg និង Cl; Na និង O; K និង F; Li និង S? ពន្យល់តាមបន្ទុក។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>K និង F៖</b> \(\ce{K+}\) បន្សាប \(\ce{F-}\) បាន \(\ce{KF}\)។ គូផ្សេងទៀតបាន \(\ce{MgCl2}\) (1:2), \(\ce{Na2O}\) (2:1) និង \(\ce{Li2S}\) (2:1)។</p></div></details>
+<details id="practice-ch3-6"><summary><span class="q">៦.</span><span>ហេតុអ្វី NaCl រាវចម្លងអគ្គិសនី តែ NaCl រឹងមិនចម្លង? តើសូលុយស្យុង NaCl ក្នុងទឹកអាចចម្លងដែរឬទេ?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>ក្នុង NaCl រឹង អ៊ីយ៉ុងជាប់ក្នុងបណ្ដាញគ្រីស្តាល់ មិនអាចផ្លាស់ទីឆ្លងកាត់អង្គធាតុរឹងបាន។ ពេលរាវ អ៊ីយ៉ុងអាចផ្លាស់ទីនាំបន្ទុក។ <b>អាច៖</b> សូលុយស្យុង NaCl មាន Na⁺ និង Cl⁻ ដែលអាចផ្លាស់ទីបាន ដូច្នេះចម្លងអគ្គិសនី។</p></div></details>
+</div>
+</section>
+
+<!-- ================= CHAPTER 4 ================= -->
+<section class="chapter" id="ch4">
+  <div class="chead"><span class="num">ជំពូកទី ៤</span><h2>គីមីសរីរាង្គ</h2></div>
+  <p><b>គីមីសរីរាង្គ</b> សិក្សាពីសមាសធាតុកាបូន។ <b>អ៊ីដ្រូកាបួ</b> ជាសមាសធាតុដែលផ្សំឡើងដោយអាតូម <b>C</b> និង <b>H</b> តែប៉ុណ្ណោះ។</p>
+
+  <h3 id="c4-oil"><span class="n">៤.១</span>ប្រេងកាត និងឥន្ធនៈ</h3>
+  <div class="two" style="align-items:center">
+    <div>
+      <p>ប្រេងកាត និងឧស្ម័នធម្មជាតិ កើតពីសំណល់សត្វ និងរុក្ខជាតិសមុទ្រ ក្រោមសីតុណ្ហភាព និងសម្ពាធខ្ពស់ អស់រាប់លានឆ្នាំ។ វាជា<b>ឥន្ធនៈហ្វូស៊ីល</b> ដែលមិនអាចកកើតឡើងវិញបាន។</p>
+      <ul>
+        <li>ប្រេងកាតឆៅ៖ ល្បាយអ៊ីដ្រូកាបួច្រើនប្រភេទ (1 ដល់ 50 អាតូម C)</li>
+        <li>ឧស្ម័នធម្មជាតិ៖ ភាគច្រើនជា<b>មេតាន</b> (ប្រហែល 90%)</li>
+      </ul>
+      <div class="key"><span class="lab">ចម្រាញ់ប្រភាគ</span><br>គេកំដៅប្រេងឆៅដល់ ~380 °C ក្នុង<b>ប៉មចម្រាញ់</b>។ ចំហាយឡើងលើ ហើយកករួញនៅកម្ពស់ផ្សេងៗតាម<b>ចំណុចរំពុះ</b>៖ ម៉ូលេគុលតូច (ចំណុចរំពុះទាប) ចេញនៅខាងលើ។</div>
+    </div>
+    <figure class="card-fig">
+      <svg viewBox="0 0 330 330" role="img" aria-label="ប៉មចម្រាញ់ប្រភាគប្រេងកាត">
+        <defs><linearGradient id="tw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4dabf7" stop-opacity=".25"/><stop offset="1" stop-color="#f76707" stop-opacity=".35"/></linearGradient></defs>
+        <rect x="90" y="20" width="80" height="270" rx="10" style="fill:url(#tw);stroke:var(--ink);stroke-width:2"/>
+        <g class="dsh"><line x1="90" y1="62" x2="170" y2="62"/><line x1="90" y1="104" x2="170" y2="104"/><line x1="90" y1="146" x2="170" y2="146"/><line x1="90" y1="188" x2="170" y2="188"/><line x1="90" y1="230" x2="170" y2="230"/></g>
+        <g class="sm" text-anchor="end"><text x="84" y="46">25 °C</text><text x="84" y="88">120 °C</text><text x="84" y="130">180 °C</text><text x="84" y="172">260 °C</text><text x="84" y="214">340 °C</text><text x="84" y="256">360 °C</text></g>
+        <g class="ln" style="stroke-width:1.6">
+          <line x1="170" y1="42" x2="200" y2="42" marker-end="url(#ar)"/><line x1="170" y1="84" x2="200" y2="84" marker-end="url(#ar)"/><line x1="170" y1="126" x2="200" y2="126" marker-end="url(#ar)"/><line x1="170" y1="168" x2="200" y2="168" marker-end="url(#ar)"/><line x1="170" y1="210" x2="200" y2="210" marker-end="url(#ar)"/><line x1="170" y1="252" x2="200" y2="252" marker-end="url(#ar)"/>
+        </g>
+        <g><text x="206" y="47">ឧស្ម័នប្រេងកាត</text><text x="206" y="89">សាំង</text><text x="206" y="131">ណាហ្វតា</text><text x="206" y="173">ប្រេងកាត</text><text x="206" y="215">ម៉ាស៊ូត</text><text x="206" y="257">ប្រេងរំអិល · ក្បៀរ</text></g>
+        <line x1="20" y1="276" x2="88" y2="276" class="ln" marker-end="url(#ar)"/><text x="20" y="268" class="sm">ប្រេងឆៅ ~380 °C</text>
+        <text x="130" y="312" text-anchor="middle" class="sm">ខ្ពស់ → ម៉ូលេគុលតូច · ទាប → ម៉ូលេគុលធំ</text>
+      </svg>
+      <figcaption><b>រូបទី ៧</b> ប៉មចម្រាញ់ប្រភាគប្រេងកាត</figcaption>
+    </figure>
+  </div>
+  
+<aside class="learn-connection" id="connect-distil-crack"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> <a href="#c3-solid">កម្លាំងអន្តរម៉ូលេគុល (§៣.៣)</a> ពន្យល់បំណិត៖ អ៊ីដ្រូកាបួធំជាទូទៅមានកម្លាំងទាក់ទាញរវាងម៉ូលេគុលខ្លាំងជាង និងចំណុចរំពុះខ្ពស់ជាង។ បំណិតញែកម៉ូលេគុលដែលមានស្រាប់; ក្រាកឃីងបំបែក និងបង្កើតសម្ព័ន្ធកូវ៉ាឡង់ថ្មី។ ក្នុងសមីការក្រាកឃីងខាងក្រោម រាប់ C 5 និង H 12 សងខាង ដើម្បីផ្ទៀងផ្ទាត់ <a href="#c1-laws">ការរក្សាអាតូម (§១.១)</a>។</aside>
+<div class="rx"><span class="lab">ក្រាកិញ (Cracking)៖ បំបែកម៉ូលេគុលធំ ឱ្យទៅជាម៉ូលេគុលតូចដែលត្រូវការច្រើន (ដូចជាសាំង)</span>\[\ce{C5H12 -> C4H8 + CH4}\]</div>
+
+  <h3 id="c4-alkane"><span class="n">៤.២</span>អ៊ីដ្រូកាបួឆ្អែត៖ អាល់កាន</h3>
+  <div class="formula"><span class="tag">រូបមន្តទូទៅ</span>
+    \[\mathrm{C}_n\mathrm{H}_{2n+2}\qquad(n\ge1)\qquad\text{មានតែសម្ព័ន្ធទោល }\mathrm{C{-}C}\text{ និង }\mathrm{C{-}H}\]</div>
+  
+<aside class="learn-connection" id="connect-carbon-valence"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> សម្ព័ន្ធបួនរបស់កាបូនពន្យល់ដោយ <a href="#c3-cov">សម្ព័ន្ធកូវ៉ាឡង់ (§៣.១)</a> និង <a href="#c1-shell">អេឡិចត្រុងវ៉ាឡង់បួន (§១.៤)</a>។ ខ្សែបើកមាន C ចំនួន n និងសម្ព័ន្ធទោល C–C ចំនួន n−1 ដែលប្រើទីតាំងសម្ព័ន្ធកាបូន 2(n−1)។ ទីតាំងនៅសល់ 4n−2(n−1) = 2n+2 ភ្ជាប់ H។ ដូច្នេះបាន CₙH₂ₙ₊₂ សម្រាប់អ៊ីដ្រូកាបួឆ្អែតដែលគ្មានវដ្ត។</aside>
+<div class="widget" id="alk">
+    <div class="wt"><span>សាកល្បង</span>រំកិលចំនួនអាតូមកាបូន \(n\)</div>
+    <label for="sn">\(n\) = <b id="on">1</b></label>
+    <input type="range" id="sn" min="1" max="10" value="4">
+    <svg id="chain" viewBox="0 0 700 130" role="img" aria-label="រូបមន្តលាតអាល់កាន"></svg>
+    <div class="readout">
+      <div><small>ឈ្មោះ</small><b id="aName">—</b></div>
+      <div><small>រូបមន្តម៉ូលេគុល</small><b id="aF">—</b></div>
+      <div><small>ចំណុចរំពុះ</small><b id="aBp">—</b></div>
+      <div><small>សភាព (25 °C)</small><b id="aSt">—</b></div>
+    </div>
+  </div>
+  <div class="two">
+    <div class="cmp"><h4>ការហៅឈ្មោះ</h4>ឫសតាមចំនួន C + បច្ច័យ «<b>-ាន</b>»៖ មេតាន, អេតាន, ប្រូប៉ាន, ប៊ុយតាន, ប៉ង់តាន …។ បណ្តុំ \(\mathrm{-CH_3}\) ហៅថា <b>មេទីល</b>។<br>
+      <span class="muted">ឧ. \(\mathrm{CH_3{-}CH(CH_3){-}CH_3}\)៖ 2-មេទីលប្រូប៉ាន</span></div>
+    <div class="cmp"><h4>អ៊ីសូមែ</h4>សមាសធាតុមាន<b>រូបមន្តម៉ូលេគុលដូចគ្នា</b> តែរូបមន្តលាតខុសគ្នា។ ឧ. \(\mathrm{C_4H_{10}}\)៖ n-ប៊ុយតាន (រំពុះ −0.4 °C) និង មេទីលប្រូប៉ាន (−10.2 °C)។</div>
+  </div>
+  <aside class="learn-connection" id="connect-combustion-moles"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អនុវត្ត <a href="#c1-laws">ការរក្សាអាតូម (§១.១)</a> និង <a href="#c1-mole">ម៉ូល (§១.៥)</a> ចំពោះសមីការខាងក្រោម៖ CH₄ 1 mol (16 g) ត្រូវការ O₂ 2 mol (64 g) ហើយបាន CO₂ 1 mol (44 g) និង H₂O 2 mol (36 g)។ សងខាងសរុប 80 g។ ការបំបែកសម្ព័ន្ធអង្គធាតុប្រតិកម្មស្រូបថាមពល; ការបង្កើតសម្ព័ន្ធផលិតផលបញ្ចេញថាមពល។ ចំហេះពេញលេញបញ្ចេញថាមពលច្រើនជាងថាមពលដែលស្រូប។</aside>
+  <div class="two">
+    
+
+<div class="rx" id="c4-combustion"><span class="lab">ចំហេះពេញលេញ → CO₂ + H₂O + កម្តៅ</span>\[\ce{CH4 + 2O2 -> CO2 + 2H2O}\]\[\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}\]</div>
+    <div class="rx"><span class="lab">ប្រតិកម្មជំនួស (ក្រោមពន្លឺ \(h\nu\))</span>\[\ce{CH4 + Cl2 ->[h\nu] CH3Cl + HCl}\]<span class="muted" style="font-size:14px">បន្តជំនួសបាន៖ CH₂Cl₂ → CHCl₃ → CCl₄</span></div>
+  </div>
+
+  <h3 id="c4-alkene"><span class="n">៤.៣</span>អ៊ីដ្រូកាបួមិនទាន់ឆ្អែត៖ អាល់សែន និងអាល់ស៊ីន</h3>
+  <div class="two">
+    <figure class="card-fig">
+      <svg viewBox="0 0 300 120" role="img" aria-label="អេទីឡែន C2H4">
+        <line x1="120" y1="55" x2="180" y2="55" class="ln" style="stroke-width:2.5"/><line x1="120" y1="65" x2="180" y2="65" class="ln" style="stroke-width:2.5"/>
+        <line x1="108" y1="52" x2="76" y2="28" class="ln"/><line x1="108" y1="68" x2="76" y2="92" class="ln"/><line x1="192" y1="52" x2="224" y2="28" class="ln"/><line x1="192" y1="68" x2="224" y2="92" class="ln"/>
+        <text x="104" y="66" class="at">C</text><text x="182" y="66" class="at">C</text>
+        <text x="60" y="26" class="at">H</text><text x="60" y="106" class="at">H</text><text x="226" y="26" class="at">H</text><text x="226" y="106" class="at">H</text>
+      </svg>
+      <figcaption><b>អាល់សែន</b> \(\mathrm{C}_n\mathrm{H}_{2n}\) · មានសម្ព័ន្ធ \(\mathrm{C{=}C}\)<br>អេទីឡែន (អេតែន) \(\mathrm{C_2H_4}\)</figcaption>
+    </figure>
+    <figure class="card-fig">
+      <svg viewBox="0 0 300 120" role="img" aria-label="អាសេទីឡែន C2H2">
+        <line x1="120" y1="50" x2="180" y2="50" class="ln" style="stroke-width:2.5"/><line x1="120" y1="60" x2="180" y2="60" class="ln" style="stroke-width:2.5"/><line x1="120" y1="70" x2="180" y2="70" class="ln" style="stroke-width:2.5"/>
+        <line x1="70" y1="60" x2="100" y2="60" class="ln"/><line x1="200" y1="60" x2="230" y2="60" class="ln"/>
+        <text x="104" y="66" class="at">C</text><text x="182" y="66" class="at">C</text><text x="52" y="66" class="at">H</text><text x="234" y="66" class="at">H</text>
+      </svg>
+      <figcaption><b>អាល់ស៊ីន</b> \(\mathrm{C}_n\mathrm{H}_{2n-2}\) · មានសម្ព័ន្ធ \(\mathrm{C{\equiv}C}\)<br>អាសេទីឡែន (អេទីន) \(\mathrm{C_2H_2}\)</figcaption>
+    </figure>
+  </div>
+  <p>ការហៅឈ្មោះ៖ អាល់សែន បច្ច័យ «<b>-ែន</b>» (អេតែន, ប្រូប៉ែន, ប៊ុយ-1-អែន), អាល់ស៊ីន បច្ច័យ «<b>-ីន</b>» (អេទីន, ប្រូពីន)។ លេខបង្ហាញទីតាំងសម្ព័ន្ធពីរជាន់ ឬបីជាន់។</p>
+  
+<aside class="learn-connection" id="connect-multiple-addition"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> សម្ព័ន្ធទ្វេប្រើពីរគូអេឡិចត្រុងរួម ហើយសម្ព័ន្ធត្រីប្រើបីគូ៖ រំលឹក <a href="#c3-cov">§៣.១</a>។ ក្នុងប្រតិកម្មបូក ផ្នែកសម្ព័ន្ធ π បន្ថែមត្រូវបានជំនួសដោយសម្ព័ន្ធទោលថ្មី ខណៈអាតូមកាបូននៅតែភ្ជាប់គ្នា។ មិនមែនសម្ព័ន្ធទ្វេទាំងមូលខ្សោយជាងសម្ព័ន្ធទោលទេ។ Ni/Pt ភ្ជាប់ទៅ <a href="#c2-tr">កាតាលីករលោហៈឆ្លង (§២.៥)</a> ហើយ Br₂ ទៅ <a href="#c2-hal">ហាឡូសែន (§២.៣)</a>។</aside>
+<div class="key"><span class="lab">លក្ខណៈសំខាន់</span><br>សម្ព័ន្ធពីរជាន់ និងបីជាន់ ងាយបើកចេញ ដូច្នេះអាល់សែន និងអាល់ស៊ីន ធ្វើ<b>ប្រតិកម្មបូក</b> (សកម្មជាងអាល់កាន)។</div>
+  <div class="two">
+    <div class="rx"><span class="lab">បូកអ៊ីដ្រូសែន (កាតាលីករ Ni ឬ Pt)</span>\[\ce{CH2=CH2 + H2 ->[Ni] CH3-CH3}\]</div>
+    <div class="rx"><span class="lab">បូកប្រូម៖ ធ្វើតេស្ត ទឹកប្រូមពណ៌ត្នោត → បាត់ពណ៌</span>\[\ce{CH2=CH2 + Br2 -> CH2Br-CH2Br}\]</div>
+    <div class="rx"><span class="lab">ទ្រាតកម្ម (បូកទឹក) → អេតាណុល</span>\[\ce{CH2=CH2 + H2O ->[H+] CH3-CH2OH}\]</div>
+    <div class="rx"><span class="lab">ប៉ូលីមែកម្ម → ប្លាស្ទិក PE / PVC</span>\[n\,\ce{CH2=CH2 -> }\,\big(\ce{CH2-CH2}\big)_n\]</div>
+  </div>
+  <div class="two">
+    <div class="rx"><span class="lab">ផលិតអាសេទីឡែន ពីកាល់ស្យូមកាប៊ួ</span>\[\ce{CaC2 + 2H2O -> C2H2 ^ + Ca(OH)2}\]</div>
+    <div class="rx"><span class="lab">ចំហេះអាសេទីឡែន ផ្តល់សីតុណ្ហភាព ~3000 °C (ផ្សារដែក)</span>\[\ce{C2H2 + 5/2O2 -> 2CO2 + H2O}\]</div>
+  </div>
+
+  <h3 id="c4-benz"><span class="n">៤.៤</span>អ៊ីដ្រូកាបួក្រអូប៖ បង់សែន</h3>
+  <div class="two" style="align-items:center">
+    <figure class="card-fig">
+      <svg viewBox="0 0 320 170" role="img" aria-label="រូបមន្តបង់សែន">
+        <g id="benz1" transform="translate(80,85)"></g>
+        <text x="160" y="92" text-anchor="middle" style="font-size:20px">≡</text>
+        <g id="benz2" transform="translate(240,85)"></g>
+      </svg>
+      <figcaption><b>រូបទី ៨</b> បង់សែន \(\mathrm{C_6H_6}\)៖ ប្រាំមួយជ្រុង អេឡិចត្រុងរាលដាលស្មើ</figcaption>
+    </figure>
+    <div>
+      <p><b>បង់សែន</b> \(\mathrm{C_6H_6}\)៖ អង្គធាតុរាវ គ្មានពណ៌ ក្លិនក្រអូប ងាយហើរ មិនរលាយក្នុងទឹក (ចំណុចរំពុះ 80.1 °C)។ សម្ព័ន្ធ C–C ទាំង 6 មានប្រវែងស្មើគ្នា ដូច្នេះវា<b>មានស្ថិរភាព</b>៖ ពេញចិត្តប្រតិកម្ម<b>ជំនួស</b> ជាងប្រតិកម្មបូក។</p>
+<aside class="learn-connection" id="connect-benzene-delocalised"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ប្រៀបធៀបនឹង <a href="#c4-alkene">អាល់សែន (§៤.៣)</a>៖ អេឡិចត្រុង π របស់បង់សែនរាលដាលជុំវិញវដ្ត ធ្វើឱ្យមានស្ថិរភាពបន្ថែម។ ប្រតិកម្មជំនួសរក្សាប្រព័ន្ធអារ៉ូម៉ាទិចនេះ ខណៈប្រតិកម្មបូករំខានវា។ ដូច្នេះ បង់សែនមិនមានលក្ខណៈដូចសម្ព័ន្ធ C=C ឯករាជ្យបីទេ ទោះរូបគំនូរមួយបង្ហាញសម្ព័ន្ធឆ្លាស់គ្នាក៏ដោយ។</aside>
+
+      <p class="muted">ដេរីវេ៖ តូលុយអែន \(\mathrm{C_6H_5CH_3}\), ផេណុល \(\mathrm{C_6H_5OH}\), អានីលីន \(\mathrm{C_6H_5NH_2}\), ស្ទីរ៉ែន \(\mathrm{C_6H_5CH{=}CH_2}\)។</p>
+    </div>
+  </div>
+  <div class="two">
+    <div class="rx"><span class="lab">ក្លរកម្ម (ជំនួស)</span>\[\ce{C6H6 + Cl2 ->[FeCl3] C6H5Cl + HCl}\]</div>
+    <div class="rx"><span class="lab">នីត្រាតកម្ម (ជំនួស)</span>\[\ce{C6H6 + HNO3 ->[H2SO4] C6H5NO2 + H2O}\]</div>
+    <div class="rx"><span class="lab">បូកអ៊ីដ្រូសែន (200–300 °C)</span>\[\ce{C6H6 + 3H2 ->[Ni] C6H12}\]</div>
+    <div class="rx"><span class="lab">ចំហេះ (អណ្តាតភ្លើងមានផ្សែងខ្មៅច្រើន)</span>\[\ce{C6H6 + 15/2O2 -> 6CO2 + 3H2O}\]</div>
+  </div>
+
+  <h3 id="c4-fert"><span class="n">៤.៥</span>គីមីអនុវត្ត៖ ជីគីមី</h3>
+  <p>រុក្ខជាតិត្រូវការធាតុចិញ្ចឹមសំខាន់ ៣៖ <b>អាសូត (N)</b>, <b>ផូស្វ័រ (P)</b> និង <b>ប៉ូតាស្យូម (K)</b>។</p>
+<aside class="learn-connection" id="connect-nutrient-elements"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> N, P និង K នៅទីនេះជា<b>និមិត្តសញ្ញាធាតុ</b>ពី <a href="#c2-table">តារាងខួប (§២.១)</a> មិនមានន័យថាជីផ្ទុកឧស្ម័នអាសូត ផូស្វ័រធាតុសុទ្ធ ឬលោហៈប៉ូតាស្យូមទេ។ ជាទូទៅ រុក្ខជាតិស្រូបសារធាតុចិញ្ចឹមទាំងនេះជាអ៊ីយ៉ុងរលាយ ដូចជា NO₃⁻, NH₄⁺ អ៊ីយ៉ុងផូស្វាត និង K⁺។ លោហៈប៉ូតាស្យូមក្នុង <a href="#c2-alk">§២.២</a> ខុសគ្នាតាមគីមីពី K⁺ ក្នុងជី។</aside>
+
+  <figure>
+    <svg viewBox="0 0 700 220" role="img" aria-label="តួនាទី N P K ចំពោះរុក្ខជាតិ">
+      <rect x="0" y="150" width="700" height="70" style="fill:#8d6e63;opacity:.25"/>
+      <line x1="350" y1="150" x2="350" y2="60" style="stroke:#2f9e44;stroke-width:6"/>
+      <path d="M350 100 C310 70 280 80 268 96 C300 110 330 108 350 100Z" fill="#40c057"/>
+      <path d="M350 80 C390 50 420 60 432 76 C400 92 370 90 350 80Z" fill="#40c057"/>
+      <path d="M350 120 C390 100 414 108 424 120 C396 134 370 130 350 120Z" fill="#51cf66"/>
+      <circle cx="350" cy="50" r="12" fill="#fab005"/><circle cx="338" cy="44" r="7" fill="#ffd43b"/><circle cx="362" cy="44" r="7" fill="#ffd43b"/><circle cx="350" cy="36" r="7" fill="#ffd43b"/>
+      <path d="M350 150 L330 200 M350 150 L352 210 M350 150 L374 196 M340 175 L318 186 M362 178 L386 184" style="stroke:#795548;stroke-width:3;fill:none"/>
+      <g style="font-weight:700">
+        <rect x="20" y="40" width="200" height="74" rx="10" style="fill:var(--card);stroke:#2f9e44;stroke-width:2"/>
+        <text x="34" y="66" style="fill:#2f9e44;font-size:18px">N អាសូត</text><text x="34" y="90" class="sm">ស្លឹកលូតលាស់ ពណ៌បៃតង</text><text x="34" y="106" class="sm">បង្កើតប្រូតេអ៊ីន</text>
+        <line x1="220" y1="78" x2="272" y2="92" class="dsh"/>
+        <rect x="480" y="20" width="200" height="74" rx="10" style="fill:var(--card);stroke:#e8590c;stroke-width:2"/>
+        <text x="494" y="46" style="fill:#e8590c;font-size:18px">P ផូស្វ័រ</text><text x="494" y="70" class="sm">ឫសរឹងមាំ ផ្កា និងគ្រាប់</text><text x="494" y="86" class="sm">ទុំលឿន</text>
+        <line x1="480" y1="56" x2="364" y2="48" class="dsh"/><line x1="480" y1="80" x2="372" y2="190" class="dsh"/>
+        <rect x="480" y="120" width="200" height="74" rx="10" style="fill:var(--card);stroke:#7048e8;stroke-width:2"/>
+        <text x="494" y="146" style="fill:#7048e8;font-size:18px">K ប៉ូតាស្យូម</text><text x="494" y="170" class="sm">ផ្លែ មើម ធន់នឹងជំងឺ</text><text x="494" y="186" class="sm">បង្កើតស្ករ និងម្សៅ</text>
+      </g>
+    </svg>
+    <figcaption><b>រូបទី ៩</b> តួនាទីនៃធាតុ N P K ចំពោះរុក្ខជាតិ</figcaption>
+  </figure>
+  <div class="three">
+    <div class="cmp"><h4>ជីសរីរាង្គ</h4>ជីធម្មជាតិ៖ លាមកសត្វ ស្លឹកឈើ កំប៉ុស្ត។ ជួយកែលម្អដី តែមានជាតិ N P K តិច។</div>
+    <div class="cmp"><h4>ជីទោល</h4>មានធាតុចិញ្ចឹមតែ 1 ប្រភេទ។ ឧ. អ៊ុយរ៉េ \(\mathrm{CO(NH_2)_2}\), \(\mathrm{(NH_4)_2SO_4}\), \(\mathrm{NH_4NO_3}\), \(\mathrm{KCl}\)។</div>
+    <div class="cmp"><h4>ជីសមាស</h4>មានធាតុចិញ្ចឹម 2–3 (NP, NK, PK, NPK)។ ឧ. \(\mathrm{KNO_3}\) (NK), \(\mathrm{(NH_4)H_2PO_4}\) (NP)។</div>
+  </div>
+  
+<aside class="learn-connection" id="connect-fertiliser-ions"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> អនុវត្ត <a href="#c3-ion">តុល្យភាពបន្ទុក (§៣.២)</a>៖ NH₄⁺ និង NO₃⁻ រួមគ្នា 1:1 → NH₄NO₃; NH₄⁺ ពីរបន្សាប SO₄²⁻ → (NH₄)₂SO₄។ ក្នុងអ៊ីយ៉ុងពហុអាតូមទាំងនេះមានសម្ព័ន្ធកូវ៉ាឡង់ ប៉ុន្តែអ៊ីយ៉ុងទាក់ទាញគ្នាដោយសម្ព័ន្ធអ៊ីយ៉ុង។ អ៊ុយរេជាសមាសធាតុម៉ូលេគុលកូវ៉ាឡង់ ដូច្នេះមិនមែនជីទាំងអស់ជាអំបិលអ៊ីយ៉ុងទេ។</aside>
+<div class="rx"><span class="lab">ផលិតជីអាសូត ពីអាម៉ូញ៉ាក់</span>
+    \[\ce{2NH3 + CO2 -> CO(NH2)2 + H2O}\qquad \ce{2NH3 + H2SO4 -> (NH4)2SO4}\qquad \ce{NH3 + HNO3 -> NH4NO3}\]</div>
+  <p class="muted">ប្រយ័ត្ន៖ ការប្រើជីលើសកម្រិត ធ្វើឱ្យជីហូរចូលទឹក បង្កការបំពុលបរិស្ថាន និងគ្រោះថ្នាក់ដល់សុខភាព។ ត្រូវប្រើជីឱ្យត្រឹមត្រូវ តាមតម្រូវការដំណាំ។</p>
+
+
+<aside class="learn-connection" id="connect-fertiliser-mass"><b>ភ្ជាប់ចំណេះដឹងដែលបានរៀន៖</b> ប្រើ <a href="#c1-mole">ម៉ាសម៉ូល (§១.៥)</a> ដើម្បីប្រៀបធៀបបរិមាណអាសូត។ សម្រាប់ NH₄NO₃៖ M = 2×14 + 4×1 + 3×16 = 80 g/mol; អាសូតរួមចំណែក 28 g/mol ដូច្នេះមានអាសូត (28/80)×100 = 35% តាមម៉ាស។ N ពីរអាតូមមកពីទាំង NH₄⁺ និង NO₃⁻ មិនមែនពីអ៊ីយ៉ុងតែមួយទេ។ អនុវត្តក្នុង <a href="#practice-ch4-fertiliser-2">លំហាត់ជីដែលមានដំណោះស្រាយ</a>។</aside>
+<div class="chapter-practice" id="practice-ch4">
+<h3>គីមីសរីរាង្គ៖ លំហាត់ពីសៀវភៅសិក្សា</h3>
+<p class="muted">សម្រួលពីលំហាត់ក្នុងសៀវភៅសិក្សា ទំព័រ 114 (លេខទំព័របោះពុម្ព)។ ដំណោះស្រាយបន្ថែមសម្រាប់គេហទំព័រនេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch4-1"><summary><span class="q">១.</span><span>តើដំណើរការណាបំបែកសមាសភាគប្រេងកាត៖ ប្រតិកម្មគីមី បំណិតប្រភាគ ចម្រោះ ឬក្រូម៉ាតូក្រាហ្វី? ពន្យល់គោលការណ៍។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>បំណិតប្រភាគ។</b> អ៊ីដ្រូកាបួមានចន្លោះសីតុណ្ហភាពរំពុះខុសគ្នា ដូច្នេះហួត និងកកជារាវនៅសីតុណ្ហភាពខុសគ្នា។ នេះជាការបំបែករូប មិនត្រូវការបំបែកម៉ូលេគុលទេ។</p></div></details>
+<details id="practice-ch4-2"><summary><span class="q">២.</span><span>តើសមាសភាគសំខាន់នៃឧស្ម័នធម្មជាតិជាអ្វី? សរសេររូបមន្តម៉ូលេគុល និងសមីការចំហេះពេញលេញ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>មេតាន \(\ce{CH4}\)។</b> C មួយឱ្យ CO₂ មួយ ហើយ H បួនឱ្យ H₂O ពីរ។ ត្រូវការ O បួនអាតូម៖</p>\[\ce{CH4 + 2O2 -> CO2 + 2H2O}\]</div></details>
+<details id="practice-ch4-3"><summary><span class="q">៣.</span><span>អាល់កានមួយមានម៉ាសម៉ូល 58 g/mol។ រករូបមន្តម៉ូលេគុល និងសរសេររូបមន្តស្ទើរលាត ព្រមទាំងឈ្មោះអ៊ីសូមែររចនាសម្ព័ន្ធទាំងអស់។ ឱ្យ C = 12 និង H = 1។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>អាល់កានមានរូបមន្ត \(\ce{C_nH_{2n+2}}\)៖</p>\[M=12n+(2n+2)=14n+2=58\Rightarrow n=4\]<p>រូបមន្ត៖ <b>C₄H₁₀</b>។ មានអ៊ីសូមែរពីរ៖ <b>ប៊ុយតាន</b> CH₃–CH₂–CH₂–CH₃ និង <b>2-មេទីលប្រូប៉ាន</b> CH₃–CH(CH₃)–CH₃។</p></div></details>
+<details id="practice-ch4-4"><summary><span class="q">៤.</span><span>សរសេររូបមន្តស្ទើរលាតរបស់ 2,2,4-ទ្រីមេទីលប៉ង់តាន (អ៊ីសូអុកតាន)។ រាប់អាតូម C និង H ដើម្បីផ្ទៀងផ្ទាត់រូបមន្ត។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>CH₃–C(CH₃)₂–CH₂–CH(CH₃)–CH₃។</b> ខ្សែមេមាន C ប្រាំ បូកក្រុមមេទីលបី បាន C សរុប 8។ ចំនួន H៖ 3 + 0 + 6 + 2 + 1 + 3 + 3 = 18។ រូបមន្តគឺ <b>C₈H₁₈</b> ស្របនឹងរូបមន្តទូទៅអាល់កាន។</p></div></details>
+<details id="practice-ch4-5"><summary><span class="q">៥.</span><span>សរសេរសមីការចំហេះពេញលេញនៃអាសេទីឡែន និងអេទីឡែន។ ល្បាយមានឧស្ម័ននីមួយៗ 1 L។ រកមាឌអុកស៊ីសែនចាំបាច់ និងម៉ាស CO₂ កកើត។ មាឌឧស្ម័នទាំងអស់វាស់នៅលក្ខខណ្ឌស្តង់ដារ ឱ្យ Vₘ = 22.4 L/mol និង M(CO₂) = 44 g/mol។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p>\[\ce{2C2H2 + 5O2 -> 4CO2 + 2H2O}\]\[\ce{C2H4 + 3O2 -> 2CO2 + 2H2O}\]<p>នៅសីតុណ្ហភាព និងសម្ពាធដូចគ្នា មាឌឧស្ម័នសមាមាត្រនឹងចំនួនម៉ូល។ អាសេទីឡែនត្រូវការ O₂ 2.5 L ហើយអេទីឡែនត្រូវការ O₂ 3 L។</p>\[V(\ce{O2})=2.5+3=5.5\,\text{L}\]\[V(\ce{CO2})=2+2=4\,\text{L},\quad m=\frac{4}{22.4}\times44\approx7.86\,\text{g}\]</div></details>
+<details id="practice-ch4-6"><summary><span class="q">៦.</span><span>អាសេទីឡែនធ្វើប្រតិកម្មបូកអ៊ីដ្រូសែនពេញលេញ ដោយមាននីកែលជាកាតាលីករ។ បើបានអេតាន 10 g រកមាឌអាសេទីឡែនដែលប្រើនៅលក្ខខណ្ឌស្តង់ដារ។ ឱ្យ C = 12, H = 1 និង Vₘ = 22.4 L/mol។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p>\[\ce{C2H2 + 2H2 ->[Ni] C2H6}\]<p>\(M(\ce{C2H6})=2(12)+6=30\,\text{g/mol}\)។ សមាមាត្រម៉ូលអាសេទីឡែន៖អេតាន គឺ 1:1។</p>\[n(\ce{C2H2})=\frac{10}{30}=\frac13\,\text{mol}\]\[V=nV_m=\frac13\times22.4\approx7.47\,\text{L}\]<p>សន្មតថាបម្លែងទៅជាអេតានទាំងស្រុង និងគ្មានការបាត់បង់ផលិតផល។</p></div></details>
+</div>
+
+<div class="chapter-practice" id="practice-ch4-fertiliser">
+<h3>ជី៖ លំហាត់ពីសៀវភៅសិក្សា</h3>
+<p class="muted">សម្រួលពីលំហាត់ក្នុងសៀវភៅសិក្សា ទំព័រ 122 (លេខទំព័របោះពុម្ព)។ ដំណោះស្រាយបន្ថែមសម្រាប់គេហទំព័រនេះ។</p><p>ចូរសរសេរចម្លើយដោយខ្លួនឯងសិន។ ចុចលើសំណួរ ដើម្បីបង្ហាញដំណោះស្រាយ។</p>
+<details id="practice-ch4-fertiliser-1"><summary><span class="q">១.</span><span>តើសារធាតុណាជាជីអាសូត៖ HNO₃, N₂, NO₂ ឬ NH₄NO₃? ចូរប្រាប់ឈ្មោះ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p><b>NH₄NO₃ អាម៉ូញ៉ូមនីត្រាត។</b> វាផ្ដល់អាសូតដែលរុក្ខជាតិអាចស្រូបយកបាន ជាអ៊ីយ៉ុងអាម៉ូញ៉ូម និងនីត្រាត។ ដំណាំភាគច្រើនមិនអាចប្រើឧស្ម័នអាសូតដោយផ្ទាល់បានទេ។</p></div></details>
+<details id="practice-ch4-fertiliser-2"><summary><span class="q">២.</span><span>គណនាភាគរយម៉ាសអាសូតក្នុង NH₄NO₃។ ប្រាប់ឈ្មោះអាស៊ីត និងបាសដែលមានប្រតិកម្មបង្កើតវា និងសរសេរសមីការ។ ឱ្យ N = 14, H = 1, O = 16។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p>\[M=2(14)+4(1)+3(16)=80\,\text{g/mol}\]\[\%N=\frac{28}{80}\times100=35\%\]<p>អាស៊ីតនីទ្រិចមានប្រតិកម្មជាមួយអាម៉ូញ៉ាក់ (ជាបាស)៖</p>\[\ce{NH3 + HNO3 -> NH4NO3}\]</div></details>
+<details id="practice-ch4-fertiliser-3"><summary><span class="q">៣.</span><span>អ៊ុយរេ CO(NH₂)₂ មានប្រតិកម្មជាមួយទឹក បង្កើតអាម៉ូញ៉ាក់ និងកាបូនឌីអុកស៊ីត។ ចូរផ្ទឹមសមីការ។ ហេតុអ្វីសមីការត្រូវរក្សាចំនួនអាតូមនីមួយៗ?</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p>\[\ce{CO(NH2)2 + H2O -> 2NH3 + CO2}\]<p>សងខាងមាន C:1, N:2, H:6, O:2។ ប្រតិកម្មគីមីរៀបអាតូមឡើងវិញ មិនបង្កើត ឬបំផ្លាញអាតូមទេ។</p></div></details>
+<details id="practice-ch4-fertiliser-4"><summary><span class="q">៤.</span><span>ទន្លេមួយទទួលទឹកហូរនាំជីច្រើនពេក មានសារាយកើនឡើង ហើយអុកស៊ីសែនរលាយក្នុងទឹកថយចុះ។ ពន្យល់លំដាប់ហេតុការណ៍ និងផ្ដល់វិធីកាត់បន្ថយការបំពុលមួយ។</span></summary><div class="ans"><p><b>ដំណោះស្រាយ</b></p><p>នីត្រាត និងផូស្វាតលើសជំរុញការលូតលាស់សារាយ។ ពេលសារាយងាប់ មីក្រូសារពាង្គកាយបំបែកវា និងប្រើអុកស៊ីសែនរលាយក្នុងទឹក ធ្វើឱ្យប៉ះពាល់ដល់ត្រី។ កាត់បន្ថយទឹកហូរនាំជី ដោយដាក់ជីតាមតម្រូវការ ជៀសវាងដាក់មុនភ្លៀងខ្លាំង ឬរក្សាតំបន់រុក្ខជាតិតាមមាត់ទឹក។</p></div></details>
+</div>
+</section>
+
+<!-- ================= SUMMARY + EXERCISES ================= -->
+<section class="chapter" id="summary">
+  <div class="chead"><span class="num">✓</span><h2>មេរៀនសង្ខេប</h2></div>
+  <div class="sumgrid">
+    <div class="cmp"><h4>អាតូម</h4>\[{}^{A}_{Z}\mathrm X,\quad N=A-Z\]ស្រទាប់ទី \(n\) ផ្ទុកអតិបរមា \(2n^2\) e⁻។</div>
+    <div class="cmp"><h4>ម៉ូល</h4>\[n=\frac{m}{M},\quad \mathcal N=6.02\times10^{23}\]</div>
+    <div class="cmp"><h4>តារាងខួប</h4>ក្រុម = ចំនួន e⁻ វ៉ាឡង់ · ខួប = ចំនួនស្រទាប់។ ក្រុម I សកម្មកើនចុះក្រោម · ក្រុម VII ថយចុះក្រោម។</div>
+    <div class="cmp"><h4>សម្ព័ន្ធគីមី</h4><b>កូវ៉ាឡង់</b>៖ ដាក់រួម e⁻ (អលោហៈ–អលោហៈ)។ <b>អ៊ីយ៉ុង</b>៖ ផ្ទេរ e⁻ (លោហៈ–អលោហៈ)។ គោលដៅ៖ ច្បាប់អុកតេ។</div>
+    <div class="cmp"><h4>អ៊ីដ្រូកាបួ</h4>អាល់កាន \(\mathrm{C}_n\mathrm{H}_{2n+2}\) · អាល់សែន \(\mathrm{C}_n\mathrm{H}_{2n}\) · អាល់ស៊ីន \(\mathrm{C}_n\mathrm{H}_{2n-2}\) · បង់សែន \(\mathrm{C_6H_6}\)</div>
+    <div class="cmp"><h4>ប្រភេទប្រតិកម្ម</h4>អាល់កាន, បង់សែន → <b>ជំនួស</b> · អាល់សែន, អាល់ស៊ីន → <b>បូក</b> · ទាំងអស់ → <b>ចំហេះ</b> → CO₂ + H₂O</div>
+  </div>
+</section>
+
+<section class="chapter" id="exercises">
+<p class="practice-links">លំហាត់តាមជំពូក: <a href="#practice-ch1">1</a><a href="#practice-ch2">2</a><a href="#practice-ch3">3</a><a href="#practice-ch4">4</a></p>
+  <div class="chead"><span class="num">?</span><h2>សំណួរ និងលំហាត់</h2></div>
+  <p class="muted">ព្យាយាមដោះស្រាយដោយខ្លួនឯងសិន រួចចុចលើសំណួរដើម្បីមើលចម្លើយ។</p>
+  <details><summary><span class="q">១.</span><span>អាតូមមួយមាន 11 ប្រូតុង និង 12 ណឺត្រុង។ រកចំនួនម៉ាស ចំនួនអេឡិចត្រុង និងសរសេរនិមិត្តសញ្ញា។</span></summary>
+    <div class="ans">\(A=11+12=23\), \(e^-=11\) → ធាតុសូដ្យូម \(\ce{^{23}_{11}Na}\)។</div></details>
+  <details><summary><span class="q">២.</span><span>ក្លរមានអ៊ីសូតូប \(\ce{^{35}Cl}\) (75.76%) និង \(\ce{^{37}Cl}\) (24.24%)។ គណនាម៉ាសអាតូមមធ្យម។</span></summary>
+    <div class="ans">\[35\times0.7576+37\times0.2424=26.52+8.97\approx35.5\,\text{u}\]</div></details>
+  <details><summary><span class="q">៣.</span><span>សរសេររបាយអេឡិចត្រុងនៃ Mg (Z = 12)។ តើវានៅក្រុម និងខួបណា?</span></summary>
+    <div class="ans">\((K)^2(L)^8(M)^2\) → 2 អេឡិចត្រុងវ៉ាឡង់ = <b>ក្រុម II</b>, 3 ស្រទាប់ = <b>ខួបទី ៣</b>។ វាបោះបង់ 2e⁻ ក្លាយជា \(\mathrm{Mg^{2+}}\)។</div></details>
+  <details><summary><span class="q">៤.</span><span>គណនាចំនួនម៉ូល និងចំនួនម៉ូលេគុល ក្នុងទឹក 36 g។ (H = 1, O = 16)</span></summary>
+    <div class="ans">\(M(\mathrm{H_2O})=18\,\text{g·mol}^{-1}\) ⇒ \(n=\dfrac{36}{18}=2\,\text{mol}\) ⇒ \(2\times6.02\times10^{23}=1.204\times10^{24}\) ម៉ូលេគុល។</div></details>
+  <details><summary><span class="q">៥.</span><span>តើសមាសធាតុណាជាអ៊ីយ៉ុង ណាជាកូវ៉ាឡង់៖ KCl, CH₄, H₂O, LiF, SiO₂?</span></summary>
+    <div class="ans"><b>អ៊ីយ៉ុង</b>៖ KCl, LiF (លោហៈ + អលោហៈ)។ <b>កូវ៉ាឡង់</b>៖ CH₄, H₂O (ម៉ូលេគុល), SiO₂ (ម៉ូលេគុលធំ)។</div></details>
+  <details><summary><span class="q">៦.</span><span>សរសេរ និងផ្ទឹមសមីការចំហេះពេញលេញនៃប្រូប៉ាន \(\mathrm{C_3H_8}\)។</span></summary>
+    <div class="ans">\[\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}\]</div></details>
+  <details><summary><span class="q">៧.</span><span>តើគេប្រើអ្វីដើម្បីសម្គាល់អ៊ីដ្រូកាបួឆ្អែត និងអ៊ីដ្រូកាបួមិនទាន់ឆ្អែត?</span></summary>
+    <div class="ans">ប្រើ<b>ទឹកប្រូម</b> (ពណ៌ត្នោត)៖ អាល់សែន/អាល់ស៊ីន ធ្វើឱ្យបាត់ពណ៌ (ប្រតិកម្មបូក) ចំណែកអាល់កានមិនធ្វើឱ្យបាត់ពណ៌ទេ។
+    \[\ce{CH2=CH2 + Br2 -> CH2Br-CH2Br}\]</div></details>
+  <details><summary><span class="q">៨.</span><span>ហេតុអ្វីបានជាកសិករដាក់ជីផូស្វ័រ និងប៉ូតាស្យូម ក្រៅពីជីអាសូត?</span></summary>
+    <div class="ans">N ជួយស្លឹកលូតលាស់, P ជួយឫស ផ្កា និងគ្រាប់, K ជួយផ្លែ មើម និងធន់នឹងជំងឺ។ ដំណាំត្រូវការទាំងបី ដើម្បីផ្តល់ទិន្នផលល្អ។</div></details>
+</section>
+</main>
+</div>
+<footer class="site-foot">
+  <p class="copy"><b>© ២០២៦ ធួក ភាលី (Phealy Thourk)។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</b></p>
+  <p>គេហទំព័រនេះ រួមទាំងការរចនា កូដ រូបភាព និងការរៀបរៀងខ្លឹមសារ ត្រូវបានបង្កើតដោយ និងជាកម្មសិទ្ធិរបស់ <b>ធួក ភាលី</b>។ ហាមចម្លង កែប្រែ ឬចែកចាយឡើងវិញ ទាំងស្រុង ឬមួយផ្នែក ដោយគ្មានការអនុញ្ញាតជាលាយលក្ខណ៍អក្សរពីម្ចាស់។</p>
+  <p>ខ្លឹមសារមេរៀនផ្អែកលើសៀវភៅគីមីវិទ្យា ថ្នាក់ទី ១០ (ក្រសួងអប់រំ យុវជន និងកីឡា)។</p>
+</footer>
+
+<script type="application/json" id="elinfo">/*ELINFO:src/i18n/elinfo.km.json*/</script>
+<script>
+/*SCRIPT*/
+</script>
+</body>
+</html>
