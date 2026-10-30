@@ -1,10 +1,6 @@
-node_modules/
-.DS_Store
-Thumbs.db
-*.log
-
-# textbook PDFs and old single-file copies stay on this computer only
-*.pdf
-Lecture 1/
-physics-lecture-motion.html
-chemistry-lecture-grade10.html
+# Only the files the website needs are published; everything else stays on this computer.
+*
+!.gitignore
+!.nojekyll
+!index.html
+!index-en.html
